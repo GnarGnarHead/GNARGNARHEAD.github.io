@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} - GNARGNARHEAD</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <marquee behavior="alternate" scrollamount="12" class="marq top">
+      ★★★ BLOG / RANT POST ★★★ NO SCRIPTING ZONE ★★★
+    </marquee>
+
+    <table class="layout" cellspacing="0" cellpadding="10" border="6" align="center">
+      <tr>
+        <td colspan="2" class="header">
+          <div class="kicker">~*~ BLOG / RANT POST ~*~</div>
+          <div class="title rainbow">{{ page.title }}</div>
+          <div class="sub">
+            {% if page.date %}
+              <span class="blink">{{ page.date | date: "%Y-%m-%d" }}</span>
+            {% else %}
+              <span class="blink">DATE UNKNOWN</span>
+            {% endif %}
+            <span class="sep">|</span>
+            <span class="blink2">MARKDOWN POWER</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="nav" valign="top" width="220">
+          <div class="panel">
+            <div class="panelTitle">NAVIGATION</div>
+            <a class="btn" href="{{ '/index.html' | relative_url }}">HOME</a>
+            <a class="btn" href="{{ '/projects.html' | relative_url }}">PROJECTS</a>
+            <a class="btn current" href="{{ '/blogs/index.html' | relative_url }}">BLOG / RANTS INDEX</a>
+            <hr class="hr">
+            <a class="btn" href="https://github.com/gnargnarhead" target="_blank" rel="noreferrer">GITHUB</a>
+          </div>
+        </td>
+        <td class="content" valign="top">
+          <div class="panel">
+            <div class="panelTitle">POST</div>
+            <div class="small post">
+              <div class="postMeta">
+                {% if page.date %}
+                  <b>Date:</b> <span class="counter">{{ page.date | date: "%Y-%m-%d" }}</span>
+                {% endif %}
+                {% if page.tags %}
+                  <span class="sep">|</span>
+                  <b>Tags:</b> {{ page.tags | join: ", " }}
+                {% endif %}
+              </div>
+              {{ content }}
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">
+          <marquee behavior="alternate" scrollamount="9" class="marq bottom">
+            ✦ POSTS ARE MADE OF WORDS ✦
+          </marquee>
+          <div class="tiny">
+            © 1999 GNARGNARHEAD • made with: YAML front matter
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
