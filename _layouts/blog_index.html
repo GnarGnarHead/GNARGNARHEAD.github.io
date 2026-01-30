@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <marquee behavior="alternate" scrollamount="12" class="marq top">
+      ★★★ BLOG / RANTS LOG ★★★ PURE MARKDOWN POSTS ★★★
+    </marquee>
+
+    <table class="layout" cellspacing="0" cellpadding="10" border="6" align="center">
+      <tr>
+        <td colspan="2" class="header">
+          <div class="kicker">~*~ TRANSMISIONS FROM THE SHRINE ~*~</div>
+          <div class="title rainbow">BLOG / RANTS</div>
+          <div class="sub">
+            <span class="blink">NO JS</span>
+            <span class="sep">|</span>
+            <span class="blink2">LOW EFFORT POSTIN'</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="nav" valign="top" width="220">
+          <div class="panel">
+            <div class="panelTitle">NAVIGATION</div>
+            <a class="btn" href="{{ '/index.html' | relative_url }}">HOME</a>
+            <a class="btn" href="{{ '/index.html#about' | relative_url }}">ABOUT ME</a>
+            <a class="btn" href="{{ '/index.html#now' | relative_url }}">NOW</a>
+            <a class="btn" href="{{ '/projects.html' | relative_url }}">PROJECTS</a>
+            <a class="btn current" href="{{ '/blogs/index.html' | relative_url }}">BLOG / RANTS</a>
+            <a class="btn" href="{{ '/index.html#links' | relative_url }}">LINKS</a>
+            <a class="btn" href="{{ '/index.html#faq' | relative_url }}">FAQ</a>
+          </div>
+        </td>
+
+        <td class="content" valign="top">
+          {{ content }}
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">
+          <marquee behavior="alternate" scrollamount="9" class="marq bottom">
+            ✦ NEW POSTS SOMETIMES • OLD WEB ALWAYS ✦
+          </marquee>
+          <div class="tiny">
+            © 1999 GNARGNARHEAD • writing with: Markdown + stubbornness
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
