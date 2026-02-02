@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: Past the Capability Bottleneck
-date: 2026-02-02 23:59:00
+date: 2026-02-02 23:59:00 +1100
 tags:
   - ai
   - programming
