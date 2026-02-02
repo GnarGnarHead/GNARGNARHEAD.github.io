@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
   <head>
@@ -86,20 +88,20 @@
           <div id="newz" class="panel">
             <div class="panelTitle">NEWZ</div>
             <div class="grid">
-              <div class="card">
-                <div class="cardTitle">WALLPAPER DROP</div>
-                <div class="small">
-                  <div class="tiny">
-                    <span class="blink">NEW:</span> fresh wallpaper in the vault.
-                  </div>
-                  <div class="tiny">
-                    <a href="stuff.html#wallpaper">GET IT IN STUFF</a>
-                  </div>
-                  <a href="stuff.html#wallpaper">
-                    <img class="media mediaThumb" src="photos/ChatGPT%20Image%20Jun%204,%202025,%2009_11_38%20PM.jpg" alt="Wallpaper preview" loading="lazy" decoding="async">
-                  </a>
-                </div>
-              </div>
+	              <div class="card">
+	                <div class="cardTitle">WALLPAPER DROP</div>
+	                <div class="small">
+	                  <div class="tiny">
+	                    <span class="blink">NEW:</span> fresh wallpaper in the vault.
+	                  </div>
+	                  <div class="tiny">
+	                    <a href="stuff.html#wallpaper">GET IT IN STUFF</a>
+	                  </div>
+	                  <a href="stuff.html#wallpaper">
+	                    <img class="media mediaThumb" src="photos/ChatGPT%20Image%20Jun%204%2C%202025%2C%2009_11_38%20PM.jpg" alt="Wallpaper preview" loading="lazy" decoding="async">
+	                  </a>
+	                </div>
+	              </div>
 	              <div class="card">
 	                <div class="cardTitle">MY SETUP</div>
 	                <div class="small">
@@ -114,28 +116,37 @@
 	                  </a>
 	                </div>
 	              </div>
-              <div class="card">
-                <div class="cardTitle">FAVORITES</div>
-                <div class="small">
-                  <div class="tiny">
-                    Links coming soon: games, music, weird web artifacts, etc.
-                  </div>
-                  <div class="tiny">
-                    <a href="stuff.html#favorites">OPEN FAVORITES</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="cardTitle">LATEST BLOG</div>
-                <div class="small">
-                  <div class="tiny">
-                    <span class="counter">2026-01-30</span> hello world
-                  </div>
-                  <div class="tiny">
-                    <a href="blogs/index.html">READ BLOG / RANTS</a>
-                  </div>
-                </div>
-              </div>
+	              <div class="card">
+	                <div class="cardTitle">FAVORITES</div>
+	                <div class="small">
+	                  <div class="tiny">
+	                    <a href="https://github.com/Warzone2100/warzone2100" target="_blank" rel="noreferrer">Warzone 2100</a>
+	                    <span class="sep">|</span>
+	                    <a href="https://github.com/markmoxon/elite-source-code-bbc-micro-disc" target="_blank" rel="noreferrer">Elite (BBC Micro)</a>
+	                  </div>
+	                  <div class="tiny">
+	                    <a href="stuff.html#favorites">OPEN FAVORITES</a>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="card">
+	                <div class="cardTitle">LATEST BLOG</div>
+	                <div class="small">
+	                  {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
+	                  {% assign latest_post = posts | first %}
+	                  <div class="tiny">
+	                    {% if latest_post %}
+	                      <span class="counter">{{ latest_post.date | date: "%Y-%m-%d" }}</span>
+	                      <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+	                    {% else %}
+	                      <span class="counter">0000-00-00</span> No posts yet.
+	                    {% endif %}
+	                  </div>
+	                  <div class="tiny">
+	                    <a href="blogs/index.html">READ BLOG / RANTS</a>
+	                  </div>
+	                </div>
+	              </div>
             </div>
           </div>
 
