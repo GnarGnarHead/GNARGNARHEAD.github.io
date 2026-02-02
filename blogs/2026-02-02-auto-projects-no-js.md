@@ -24,5 +24,4 @@ So `projects.html` is now a tiny Liquid loop that:
 
 One catch: GitHub Pages only refreshes the list when **this** site repo rebuilds. Creating a new repo won’t automatically rebuild the site.
 
-Fix: this repo has a scheduled GitHub Action that pings the Pages build API on a timer, so the list stays fresh.
-
+Fix: this repo has a scheduled GitHub Action (a tiny YAML workflow in `.github/workflows/` that GitHub runs on a timer) that pings the Pages build API, so the list stays fresh.
