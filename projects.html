@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
   <head>
@@ -35,7 +37,6 @@
             <a class="btn" href="photography.html">PHOTOGRAPHY</a>
             <a class="btn" href="blogs/index.html">BLOG / RANTS</a>
             <a class="btn" href="stuff.html">STUFF</a>
-            <a class="btn" href="downloadz.html">D0WNLOADZ</a>
             <a class="btn" href="index.html#links">LINKS</a>
             <a class="btn" href="index.html#faq">FAQ</a>
             <hr class="hr">
@@ -50,9 +51,9 @@
           <div class="panel">
             <div class="panelTitle">HOW THIS WERKS</div>
             <div class="small">
-              This page is a <b>manual mirror</b> of my public repos. No feeds. No API calls. No JS. Just links.
+              This page auto-lists my public GitHub repos (no JS, no manual edits) using GitHub Pages build metadata.
               <hr class="hr">
-              <b>Last sync:</b> <span class="counter">2026-01-31</span>
+              <b>Last build:</b> <span class="counter">{{ site.time | date: "%Y-%m-%d" }}</span>
               <span class="sep">|</span>
               <b>Edit:</b> <span class="counter">projects.html</span>
             </div>
@@ -61,50 +62,29 @@
           <div class="panel">
             <div class="panelTitle">PUBLIK PROJEKTS</div>
             <div class="grid">
-              <div class="card">
-                <div class="cardTitle">EscapeTheTerminal</div>
-                <div class="small">
-                  A retro cybertext adventure inspired by Philip K. Dick and William Gibson
-                  <div class="tiny">Language: Python</div>
-                  <div class="tiny">
-                    <b>Repo:</b> <a href="https://github.com/gnargnarhead/EscapeTheTerminal" target="_blank" rel="noreferrer">github.com/gnargnarhead/EscapeTheTerminal</a>
+              {% assign repos = site.github.public_repositories | where: "fork", false | sort: "pushed_at" | reverse %}
+              {% for repo in repos %}
+                <div class="card">
+                  <div class="cardTitle">{{ repo.name }}</div>
+                  <div class="small">
+                    {% if repo.description %}
+                      {{ repo.description }}
+                    {% else %}
+                      See repo for details.
+                    {% endif %}
+                    {% if repo.language %}
+                      <div class="tiny">Language: {{ repo.language }}</div>
+                    {% endif %}
+                    <div class="tiny">
+                      <b>Repo:</b> <a href="{{ repo.html_url }}" target="_blank" rel="noreferrer">{{ repo.full_name }}</a>
+                      {% if repo.homepage and repo.homepage != "" %}
+                        <span class="sep">|</span>
+                        <b>Live:</b> <a href="{{ repo.homepage }}" target="_blank" rel="noreferrer">{{ repo.homepage | replace: "https://", "" | replace: "http://", "" }}</a>
+                      {% endif %}
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="card">
-                <div class="cardTitle">GPTScreeps</div>
-                <div class="small">
-                  just tooling about seeing what I can get GPT to do
-                  <div class="tiny">Language: JavaScript</div>
-                  <div class="tiny">
-                    <b>Repo:</b> <a href="https://github.com/gnargnarhead/GPTScreeps" target="_blank" rel="noreferrer">github.com/gnargnarhead/GPTScreeps</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="cardTitle">GNARGNARHEAD.github.io</div>
-                <div class="small">
-                  This site (the cyber shrine) hosted on GitHub Pages.
-                  <div class="tiny">Language: HTML</div>
-                  <div class="tiny">
-                    <b>Repo:</b> <a href="https://github.com/gnargnarhead/GNARGNARHEAD.github.io" target="_blank" rel="noreferrer">github.com/gnargnarhead/GNARGNARHEAD.github.io</a>
-                    <span class="sep">|</span>
-                    <b>Live:</b> <a href="https://gnargnarhead.github.io/" target="_blank" rel="noreferrer">gnargnarhead.github.io</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="cardTitle">RNN</div>
-                <div class="small">
-                  See repo for details.
-                  <div class="tiny">
-                    <b>Repo:</b> <a href="https://github.com/gnargnarhead/RNN" target="_blank" rel="noreferrer">github.com/gnargnarhead/RNN</a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
 
               <div class="card">
                 <div class="cardTitle">ALL REPOS</div>
