@@ -17,18 +17,23 @@ title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
 <div class="panel">
   <div class="panelTitle">POSTS</div>
   <div class="small">
-    {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
-    <ul class="postList">
-      {% for post in posts %}
-        <li{% if post.micro %} class="microPost"{% endif %}>
-          {% if post.date %}<span class="counter">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
-          {% if post.micro %}
-            <div class="microBody">{{ post.content }}</div>
-          {% else %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            {% if post.description %}<div class="tiny">{{ post.description }}</div>{% endif %}
-          {% endif %}
-        </li>
+	    {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
+	    <ul class="postList">
+	      {% for post in posts %}
+	        <li{% if post.micro %} class="microPost"{% endif %}>
+	          {% if post.date %}<span class="counter">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
+	          {% if post.micro %}
+	            <span class="microTitle">{{ post.title }}</span>
+	            {% assign micro_text = post.content | strip_html | strip_newlines | strip %}
+	            {% assign micro_title = post.title | strip %}
+	            {% if micro_text != micro_title and micro_text != "" %}
+	              <div class="microBody">{{ post.content }}</div>
+	            {% endif %}
+	          {% else %}
+	            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+	            {% if post.description %}<div class="tiny">{{ post.description }}</div>{% endif %}
+	          {% endif %}
+	        </li>
       {% endfor %}
       {% if posts.size == 0 %}
         <li><span class="counter">0000-00-00</span> No posts yet.</li>

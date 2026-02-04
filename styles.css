@@ -242,9 +242,14 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   border-top: 2px dotted rgba(255, 255, 255, 0.35);
 }
 
-.microPost { margin-bottom: 14px; }
+.microPost .counter { margin-right: 8px; }
 
-.microPost .counter { display: inline-block; margin-bottom: 6px; }
+.microTitle {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ff00ff;
+  text-shadow: 0 0 12px rgba(255, 0, 255, 0.35);
+}
 
 .microBody {
   margin: 6px 0 0;
