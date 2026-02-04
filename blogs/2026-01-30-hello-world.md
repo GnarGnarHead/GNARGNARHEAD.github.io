@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: Hello, World (No JS Edition)
-date: 2026-01-30
+date: "2026-01-30"
 tags:
   - no-js
   - old-web
