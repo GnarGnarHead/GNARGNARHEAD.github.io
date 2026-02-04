@@ -1,0 +1,221 @@
+/* Minimal, high-contrast "terminal" theme for individual blog posts.
+   Loaded only by _layouts/blog_post.html. */
+
+body.blog-post {
+  margin: 0;
+  color: #f2f2f2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background: #000 !important;
+  background-image: none !important;
+  animation: none !important;
+}
+
+body.blog-post * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body.blog-post marquee,
+body.blog-post .marq {
+  display: none !important;
+}
+
+body.blog-post .blink,
+body.blog-post .blink2 {
+  animation: none !important;
+  color: #a9a9a9;
+}
+
+body.blog-post .layout {
+  width: 900px;
+  max-width: calc(100% - 24px);
+  margin: 20px auto;
+  background: #000;
+  border: 1px solid #333 !important;
+  border-collapse: collapse;
+}
+
+body.blog-post .layout td {
+  border: 0;
+}
+
+body.blog-post .header {
+  background: transparent;
+  border-bottom: 1px solid #333;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+body.blog-post .kicker {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #a9a9a9;
+}
+
+body.blog-post .title {
+  font-size: 32px;
+  margin: 8px 0 6px;
+}
+
+body.blog-post .rainbow {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: #f2f2f2 !important;
+}
+
+body.blog-post .sub,
+body.blog-post .sep {
+  color: #a9a9a9;
+}
+
+body.blog-post .nav {
+  background: transparent;
+  border-right: 1px solid #333;
+}
+
+body.blog-post .content {
+  background: transparent;
+}
+
+body.blog-post .panel {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.blog-post .panelTitle {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #f2f2f2;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin: 0 auto 10px;
+  max-width: 82ch;
+}
+
+body.blog-post .btn {
+  display: block;
+  margin: 6px 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #f2f2f2;
+  text-decoration: underline;
+  text-align: left;
+  font-weight: normal;
+}
+
+body.blog-post .btn:hover,
+body.blog-post .btn.current {
+  color: #000;
+  background: #f2f2f2;
+  text-decoration: none;
+}
+
+body.blog-post .small {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+body.blog-post .post {
+  max-width: 82ch;
+  margin: 0 auto;
+}
+
+body.blog-post .postMeta {
+  color: #a9a9a9;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+body.blog-post .counter {
+  font-family: inherit;
+  color: #a9a9a9;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+body.blog-post a {
+  color: #f2f2f2;
+  text-decoration: underline;
+}
+
+body.blog-post a:visited {
+  color: #c6c6c6;
+}
+
+body.blog-post a:hover {
+  color: #000;
+  background: #f2f2f2;
+  text-decoration: none;
+}
+
+body.blog-post .hr {
+  border-top: 1px solid #333;
+}
+
+body.blog-post .post h1,
+body.blog-post .post h2,
+body.blog-post .post h3 {
+  color: #f2f2f2;
+  margin: 22px 0 10px;
+}
+
+body.blog-post .post pre,
+body.blog-post .post .highlight pre,
+body.blog-post .code {
+  font-size: 14px;
+  color: #f2f2f2;
+  background: #0b0b0b;
+  border: 1px solid #333;
+  padding: 12px 14px;
+  overflow-x: auto;
+}
+
+body.blog-post .post code {
+  font-family: inherit;
+  color: #f2f2f2;
+  background: #0b0b0b;
+  padding: 1px 4px;
+  border: 1px solid #333;
+}
+
+body.blog-post .post pre code,
+body.blog-post .post .highlight pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+body.blog-post .footer {
+  text-align: center;
+  background: transparent;
+  border-top: 1px solid #333;
+}
+
+body.blog-post .tiny {
+  opacity: 0.8;
+}
+
+body.blog-post ::selection {
+  color: #000;
+  background: #f2f2f2;
+}
+
+@media (max-width: 720px) {
+  body.blog-post .nav {
+    display: none;
+  }
+
+  body.blog-post .layout {
+    max-width: calc(100% - 16px);
+  }
+
+  body.blog-post .title {
+    font-size: 26px;
+  }
+}
