@@ -9,6 +9,8 @@ title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
     Drop a new <span class="counter">.md</span> file into <span class="counter">/blogs/</span> and push to GitHub Pages.
     <hr class="hr">
     Copy <span class="counter">blogs/_template.md</span> → rename it → edit <span class="counter">title</span> and <span class="counter">date</span>.
+    <hr class="hr">
+    For tweet-sized notes: add <span class="counter">micro: true</span> to the YAML front matter to embed it inline here.
   </div>
 </div>
 
@@ -18,10 +20,14 @@ title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
     {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
     <ul class="list postList">
       {% for post in posts %}
-        <li>
+        <li{% if post.micro %} class="microPost"{% endif %}>
           {% if post.date %}<span class="counter">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% if post.description %}<div class="tiny">{{ post.description }}</div>{% endif %}
+          {% if post.micro %}
+            <div class="microBody">{{ post.content }}</div>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.description %}<div class="tiny">{{ post.description }}</div>{% endif %}
+          {% endif %}
         </li>
       {% endfor %}
       {% if posts.size == 0 %}

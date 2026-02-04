@@ -5,6 +5,7 @@ date: "2026-01-30"
 tags:
   - tag1
 description: One-line summary goes here.
+# micro: true  # Optional: embed inline on /blogs/ instead of showing as a link.
 ---
 
 Write your post here. Keep it short. Ship it.

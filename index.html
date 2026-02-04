@@ -129,24 +129,36 @@
 	                  </div>
 	                </div>
 	              </div>
-	              <div class="card">
-	                <div class="cardTitle">LATEST BLOG</div>
-	                <div class="small">
-	                  {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
-	                  {% assign latest_post = posts | first %}
-	                  <div class="tiny">
-	                    {% if latest_post %}
-	                      <span class="counter">{{ latest_post.date | date: "%Y-%m-%d" }}</span>
-	                      <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
-	                    {% else %}
-	                      <span class="counter">0000-00-00</span> No posts yet.
-	                    {% endif %}
-	                  </div>
-	                  <div class="tiny">
-	                    <a href="blogs/index.html">READ BLOG / RANTS</a>
-	                  </div>
-	                </div>
-	              </div>
+		              <div class="card">
+		                <div class="cardTitle">LATEST BLOG</div>
+		                <div class="small">
+		                  {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
+		                  {% assign latest_post = nil %}
+		                  {% for p in posts %}
+		                    {% unless p.micro %}
+		                      {% assign latest_post = p %}
+		                      {% break %}
+		                    {% endunless %}
+		                  {% endfor %}
+		                  <div class="tiny">
+		                    {% if latest_post %}
+		                      <span class="counter">{{ latest_post.date | date: "%Y-%m-%d" }}</span>
+		                      <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+		                    {% else %}
+		                      {% assign latest_any = posts | first %}
+		                      {% if latest_any %}
+		                        <span class="counter">{{ latest_any.date | date: "%Y-%m-%d" }}</span>
+		                        <a href="blogs/index.html">Latest note (see index)</a>
+		                      {% else %}
+		                        <span class="counter">0000-00-00</span> No posts yet.
+		                      {% endif %}
+		                    {% endif %}
+		                  </div>
+		                  <div class="tiny">
+		                    <a href="blogs/index.html">READ BLOG / RANTS</a>
+		                  </div>
+		                </div>
+		              </div>
             </div>
           </div>
 

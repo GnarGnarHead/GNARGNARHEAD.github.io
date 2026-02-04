@@ -229,6 +229,52 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 
 .postList li { margin-bottom: 10px; }
 
+.microPost { margin-bottom: 14px; }
+
+.microPost .counter { display: inline-block; margin-bottom: 6px; }
+
+.microBody {
+  margin: 6px 0 0;
+  padding: 10px 12px;
+  background: #000;
+  border: 1px solid #333;
+  color: #f2f2f2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  line-height: 1.6;
+}
+
+.microBody p { margin: 0 0 10px; }
+.microBody p:last-child { margin-bottom: 0; }
+
+.microBody a { color: #f2f2f2; text-decoration: underline; }
+.microBody a:visited { color: #c6c6c6; }
+.microBody a:hover { color: #000; background: #f2f2f2; text-decoration: none; }
+.microBody a:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 2px; }
+
+.microBody pre {
+  font-size: 14px;
+  color: #f2f2f2;
+  background: #0b0b0b;
+  border: 1px solid #333;
+  padding: 10px 12px;
+  overflow-x: auto;
+}
+
+.microBody code {
+  font-family: inherit;
+  color: #f2f2f2;
+  background: #0b0b0b;
+  padding: 1px 4px;
+  border: 1px solid #333;
+}
+
+.microBody pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
 .postMeta {
   font-size: 12px;
   margin-bottom: 10px;
