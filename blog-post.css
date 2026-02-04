@@ -123,6 +123,7 @@ body.blog-post .small {
 body.blog-post .post {
   max-width: 82ch;
   margin: 0 auto;
+  overflow-wrap: anywhere;
 }
 
 body.blog-post .postMeta {
@@ -154,8 +155,17 @@ body.blog-post a:hover {
   text-decoration: none;
 }
 
+body.blog-post a:focus-visible {
+  outline: 2px solid #f2f2f2;
+  outline-offset: 2px;
+}
+
 body.blog-post .hr {
   border-top: 1px solid #333;
+}
+
+body.blog-post .postBack {
+  margin: 12px 0 2px;
 }
 
 body.blog-post .post h1,
@@ -163,6 +173,44 @@ body.blog-post .post h2,
 body.blog-post .post h3 {
   color: #f2f2f2;
   margin: 22px 0 10px;
+}
+
+body.blog-post .post blockquote {
+  margin: 14px 0;
+  padding: 10px 14px;
+  background: #0b0b0b;
+  border: 1px solid #333;
+  border-left: 4px solid #666;
+}
+
+body.blog-post .post img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 14px auto;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  box-sizing: border-box;
+}
+
+body.blog-post .post table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+body.blog-post .post th,
+body.blog-post .post td {
+  border: 1px solid #333;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+body.blog-post .post th {
+  background: #0b0b0b;
 }
 
 body.blog-post .post pre,
@@ -217,5 +265,49 @@ body.blog-post ::selection {
 
   body.blog-post .title {
     font-size: 26px;
+  }
+}
+
+@media print {
+  body.blog-post {
+    color: #000;
+    background: #fff !important;
+  }
+
+  body.blog-post .layout {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    border: none !important;
+  }
+
+  body.blog-post .header,
+  body.blog-post .footer {
+    border: none;
+  }
+
+  body.blog-post .panelTitle,
+  body.blog-post .postBack {
+    display: none;
+  }
+
+  body.blog-post a,
+  body.blog-post a:visited {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  body.blog-post .post pre,
+  body.blog-post .post .highlight pre,
+  body.blog-post .code,
+  body.blog-post .post code,
+  body.blog-post .post blockquote,
+  body.blog-post .post img,
+  body.blog-post .post table,
+  body.blog-post .post th,
+  body.blog-post .post td {
+    background: transparent;
+    color: #000;
+    border-color: #999;
   }
 }
