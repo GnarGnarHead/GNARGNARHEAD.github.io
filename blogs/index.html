@@ -18,7 +18,7 @@ title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
   <div class="panelTitle">POSTS</div>
   <div class="small">
     {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
-    <ul class="list postList">
+    <ul class="postList">
       {% for post in posts %}
         <li{% if post.micro %} class="microPost"{% endif %}>
           {% if post.date %}<span class="counter">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
