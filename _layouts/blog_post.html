@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} - GNARGNARHEAD</title>
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/blog-post.css' | relative_url }}">
   </head>
-  <body>
+  <body class="blog-post">
     <marquee behavior="alternate" scrollamount="12" class="marq top">
       ★★★ BLOG / RANT POST ★★★ NO SCRIPTING ZONE ★★★
     </marquee>
@@ -29,21 +30,11 @@
       </tr>
 
       <tr>
-        <td class="nav" valign="top" width="220">
+        <td class="content" valign="top" colspan="2">
           <div class="panel">
-            <div class="panelTitle">NAVIGATION</div>
-            <a class="btn" href="{{ '/index.html' | relative_url }}">HOME</a>
-            <a class="btn" href="{{ '/projects.html' | relative_url }}">PROJECTS</a>
-            <a class="btn" href="{{ '/photography.html' | relative_url }}">PHOTOGRAPHY</a>
-            <a class="btn" href="{{ '/stuff.html' | relative_url }}">STUFF</a>
-            <a class="btn current" href="{{ '/blogs/index.html' | relative_url }}">BLOG / RANTS INDEX</a>
-            <hr class="hr">
-            <a class="btn" href="https://github.com/gnargnarhead" target="_blank" rel="noreferrer">GITHUB</a>
-          </div>
-        </td>
-        <td class="content" valign="top">
-          <div class="panel">
-            <div class="panelTitle">POST</div>
+            <div class="panelTitle">
+              <a href="{{ '/blogs/index.html' | relative_url }}">← BLOG / RANTS INDEX</a>
+            </div>
             <div class="small post">
               <div class="postMeta">
                 {% if page.date %}
