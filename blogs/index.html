@@ -2,24 +2,12 @@
 layout: blog_index
 title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
 ---
-
-<div class="panel">
-  <div class="panelTitle">ADD A POST (MARKDOWN)</div>
-  <div class="small">
-    Drop a new <span class="counter">.md</span> file into <span class="counter">/blogs/</span> and push to GitHub Pages.
-    <hr class="hr">
-    Copy <span class="counter">blogs/_template.md</span> → rename it → edit <span class="counter">title</span> and <span class="counter">date</span>.
-    <hr class="hr">
-    For tweet-sized notes: add <span class="counter">micro: true</span> to the YAML front matter to embed it inline here.
-  </div>
-</div>
-
 <div class="panel">
   <div class="panelTitle">POSTS</div>
   <div class="small">
-	    {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
-	    <ul class="postList">
-	      {% for post in posts %}
+		    {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
+		    <ul class="postList">
+		      {% for post in posts %}
 	        <li{% if post.micro %} class="microPost"{% endif %}>
 	          {% if post.date %}<span class="counter">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
 	          {% if post.micro %}
@@ -38,13 +26,14 @@ title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
       {% if posts.size == 0 %}
         <li><span class="counter">0000-00-00</span> No posts yet.</li>
       {% endif %}
-    </ul>
-  </div>
-</div>
+	    </ul>
+	  </div>
+	</div>
 
-<div class="panel">
-  <div class="panelTitle">LINKS</div>
-  <div class="small">
-    <b>GitHub:</b> <a href="https://github.com/gnargnarhead" target="_blank" rel="noreferrer">github.com/gnargnarhead</a>
-  </div>
-</div>
+<!--
+HOW TO ADD A BLOG POST
+
+- Copy blogs/_template.md into /blogs/ as a new .md file.
+- Set/update the YAML front matter (at least: title and date).
+- Write the post in Markdown under the front matter.
+-->
