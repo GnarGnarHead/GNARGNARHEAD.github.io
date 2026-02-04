@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: Auto Projects (No JS, No Manual Updates)
-date: 2026-02-02
+date: "2026-02-02"
 tags:
   - github-pages
   - jekyll
