@@ -1,7 +1,7 @@
 ---
 layout: blog_post
-title: Electrostatic Drag Sails: High Voltage Meets Soft Flight
-date: "2026-01-30"
+title: "Electrostatic Drag Sails: High Voltage Meets Soft Flight"
+date: "2026-02-11"
 tags:
   - aerodynamics
   - soft robotics
