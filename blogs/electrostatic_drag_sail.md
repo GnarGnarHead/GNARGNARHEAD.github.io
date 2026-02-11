@@ -11,7 +11,7 @@ tags:
 description: How lightweight surfaces controlled by high voltage can steer, stabilize, and lift passive balloon-borne systems.
 ---
 
-Write your post here. Keep it short. Ship it.
+> Note: This post was written by AI.
 
 ## Flight by Field
 
@@ -47,4 +47,3 @@ This isn't a dream of anti-gravity. It’s control through clever geometry.
 ## A Sail That Thinks
 
 Instead of passively riding the wind, a balloon with electrostatic drag sails can **interact with the air**, changing its shape like a jellyfish in the sky. The system doesn’t fly—it **drifts smart**. It’s more organism than aircraft. And it suggests a future where flying machines are built less like drones—and more like seeds, feathers, and wings that think.
-
