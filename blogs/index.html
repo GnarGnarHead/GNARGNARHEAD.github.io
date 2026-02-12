@@ -3,10 +3,26 @@ layout: blog_index
 title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
 description: Notes, rants, and build logs on software, no-JS web projects, and experiments.
 ---
+{% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
+{% assign long_posts = posts | where_exp: "item", "item.micro != true" %}
+{% assign latest_long_post = long_posts | first %}
+<div class="panel">
+  <div class="panelTitle">START HERE</div>
+  <div class="small">
+    Entry points based on what you want:
+    <ul class="list">
+      {% if latest_long_post %}
+        <li><a href="{{ latest_long_post.url | relative_url }}">Latest full post: {{ latest_long_post.title }}</a></li>
+      {% endif %}
+      <li><a href="{{ '/photography.html' | relative_url }}">Liminal space photography contact sheet</a></li>
+      <li><a href="{{ '/projects.html' | relative_url }}">Projects tied to build logs</a></li>
+    </ul>
+  </div>
+</div>
+
 <div class="panel">
   <div class="panelTitle">POSTS</div>
   <div class="small">
-		    {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
 		    <ul class="postList">
 		      {% for post in posts %}
 	        <li{% if post.micro %} class="microPost"{% endif %}>

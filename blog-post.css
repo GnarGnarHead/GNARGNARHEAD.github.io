@@ -168,6 +168,29 @@ body.blog-post .postBack {
   margin: 12px 0 2px;
 }
 
+body.blog-post .postExplore {
+  margin: 20px 0 14px;
+  padding: 12px 14px;
+  border: 1px solid #333;
+  background: #0b0b0b;
+}
+
+body.blog-post .postExploreTitle {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #a9a9a9;
+  margin-bottom: 8px;
+}
+
+body.blog-post .postExploreList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+body.blog-post .postExploreList li {
+  margin: 6px 0;
+}
+
 body.blog-post .post h1,
 body.blog-post .post h2,
 body.blog-post .post h3 {
