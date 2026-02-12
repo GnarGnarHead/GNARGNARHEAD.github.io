@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}
+  {% if page.url and page.url != "/sitemap.xml" and page.sitemap != false and page.name != "_template.md" and page.url != "/blogs/_template.html" %}
+  {% assign clean_url = page.url | replace: "index.html", "" %}
+  <url>
+    <loc>{{ site.url }}{{ clean_url }}</loc>
+    <lastmod>{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</lastmod>
+  </url>
+  {% endif %}
+{% endfor %}
+</urlset>
