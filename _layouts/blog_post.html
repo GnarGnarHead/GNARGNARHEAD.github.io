@@ -76,6 +76,18 @@
 
       <tr>
         <td class="content" valign="top" colspan="2">
+          {% assign nav_posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | where_exp: "item", "item.micro != true" | sort: "date" %}
+          {% assign older_post = nil %}
+          {% assign newer_post = nil %}
+          {% for item in nav_posts %}
+            {% if page.date and item.date and item.date < page.date %}
+              {% assign older_post = item %}
+            {% endif %}
+            {% if page.date and item.date and item.date > page.date %}
+              {% assign newer_post = item %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
           <div class="panel">
             <div class="panelTitle">
               <a href="{{ '/blogs/index.html' | relative_url }}">← BLOG / RANTS INDEX</a>
@@ -91,6 +103,19 @@
                 {% endif %}
               </div>
               {{ content }}
+              <div class="postExplore">
+                <div class="postExploreTitle">CONTINUE EXPLORING</div>
+                <ul class="postExploreList">
+                  {% if newer_post %}
+                    <li><a href="{{ newer_post.url | relative_url }}">Newer post: {{ newer_post.title }}</a></li>
+                  {% endif %}
+                  {% if older_post %}
+                    <li><a href="{{ older_post.url | relative_url }}">Older post: {{ older_post.title }}</a></li>
+                  {% endif %}
+                  <li><a href="{{ '/photography.html' | relative_url }}">Liminal space photography contact sheet</a></li>
+                  <li><a href="{{ '/projects.html' | relative_url }}">Project archive and build log context</a></li>
+                </ul>
+              </div>
               <hr class="hr">
               <div class="postBack">
                 <a href="{{ '/blogs/index.html' | relative_url }}">← BLOG / RANTS INDEX</a>
