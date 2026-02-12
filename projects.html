@@ -1,12 +1,43 @@
 ---
+title: Open Source Projects by GNARGNARHEAD
+description: Auto-updated list of GNARGNARHEAD public GitHub repositories, experiments, and software projects.
 ---
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
   <head>
+    {% assign site_url = site.url | default: "https://gnargnarhead.github.io" %}
+    {% assign canonical_url = site_url | append: page.url %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects - GNARGNARHEAD's Cyber Shrine</title>
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:site_name" content="GNARGNARHEAD Cyber Shrine">
+    <meta property="og:image" content="{{ site_url }}/photos/setup-rendering.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | escape }}">
+    <meta name="twitter:description" content="{{ page.description | escape }}">
+    <meta name="twitter:image" content="{{ site_url }}/photos/setup-rendering.jpg">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "{{ page.title }}",
+        "url": "{{ canonical_url }}",
+        "description": "{{ page.description }}",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "GNARGNARHEAD Cyber Shrine",
+          "url": "{{ site_url }}/"
+        }
+      }
+    </script>
   </head>
   <body>
     <marquee behavior="alternate" scrollamount="12" class="marq top">
@@ -17,7 +48,7 @@
       <tr>
         <td colspan="2" class="header">
           <div class="kicker">~*~ GNARGNARHEAD PRESENTS ~*~</div>
-          <div class="title rainbow">PROJECTS</div>
+          <h1 class="title rainbow">PROJECTS</h1>
           <div class="sub">
             <span class="blink">GET YOUR SLOP</span>
             <span class="sep">|</span>
@@ -101,11 +132,11 @@
           <div class="panel">
             <div class="panelTitle">WHAT I'M INTO</div>
             <div class="small">
-              Optional: add a few bullet points about the kinds of projects you like building.
+              Kinds of software work that usually shows up here:
 	              <ul class="list">
-	                <li>lunar smeltiing</li>
-	                <li>weird web</li>
-	                <li>games / experiments</li>
+	                <li>no-JS web experiments</li>
+	                <li>tooling and workflow automation</li>
+	                <li>games, sims, and strange prototypes</li>
 	              </ul>
             </div>
           </div>
