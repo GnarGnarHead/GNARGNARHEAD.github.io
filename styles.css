@@ -211,11 +211,13 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   box-sizing: border-box;
 }
 
-.mediaThumb {
+#newz .mediaThumb {
+  width: auto;
   max-height: 140px;
 }
 
 .mediaPreview {
+  width: auto;
   max-height: 60vh;
   margin: 10px auto 0;
 }
