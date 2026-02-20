@@ -51,6 +51,24 @@ body.theme-keychain {
     linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
 }
 
+body.theme-catalog {
+  --bg: #1a1529;
+  --bg2: #342448;
+  --paper: #1b1830;
+  --ink: #f2ecff;
+  --muted: #c5b5e3;
+  --line: #66508d;
+  --accent: #ff8e4a;
+  --accent2: #ff4fa0;
+  --chip: #2d2148;
+  --shadow: 0 18px 44px rgba(7, 5, 18, 0.56);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 142, 74, 0.24), transparent 34%),
+    radial-gradient(circle at 85% 8%, rgba(255, 79, 160, 0.22), transparent 32%),
+    radial-gradient(circle at 52% 86%, rgba(99, 210, 255, 0.2), transparent 36%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+}
+
 .skipLink {
   position: absolute;
   left: 12px;
@@ -129,7 +147,16 @@ body.theme-keychain .topNav {
   background: rgba(12, 18, 37, 0.86);
 }
 
+body.theme-catalog .topNav {
+  border-color: rgba(242, 236, 255, 0.24);
+  background: rgba(18, 15, 33, 0.84);
+}
+
 body.theme-keychain .brand {
+  color: var(--ink);
+}
+
+body.theme-catalog .brand {
   color: var(--ink);
 }
 
@@ -139,8 +166,18 @@ body.theme-keychain .navLinks a {
   background: #1a2746;
 }
 
+body.theme-catalog .navLinks a {
+  color: var(--ink);
+  border-color: rgba(242, 236, 255, 0.26);
+  background: #2b1f42;
+}
+
 body.theme-keychain .navLinks a:hover {
   border-color: rgba(232, 238, 255, 0.52);
+}
+
+body.theme-catalog .navLinks a:hover {
+  border-color: rgba(242, 236, 255, 0.5);
 }
 
 .store {
@@ -185,10 +222,22 @@ body.theme-keychain .switchPill {
   background: #1a2746;
 }
 
+body.theme-catalog .switchPill {
+  color: var(--ink);
+  border-color: rgba(242, 236, 255, 0.26);
+  background: #2b1f42;
+}
+
 body.theme-keychain .skipLink {
   color: var(--ink);
   border-color: rgba(232, 238, 255, 0.44);
   background: #19284a;
+}
+
+body.theme-catalog .skipLink {
+  color: var(--ink);
+  border-color: rgba(242, 236, 255, 0.44);
+  background: #2a1f46;
 }
 
 .productTop {
@@ -356,8 +405,18 @@ body.theme-keychain .btn.secondary {
   background: #1b2d52;
 }
 
+body.theme-catalog .btn.secondary {
+  color: var(--ink);
+  border-color: rgba(242, 236, 255, 0.28);
+  background: #2e2348;
+}
+
 body.theme-keychain .kicker {
   color: #ff96c2;
+}
+
+body.theme-catalog .kicker {
+  color: #ffb993;
 }
 
 body.theme-keychain .subtitle,
@@ -366,8 +425,19 @@ body.theme-keychain .metaCard p {
   color: #d2dcff;
 }
 
+body.theme-catalog .subtitle,
+body.theme-catalog .blankCopy p,
+body.theme-catalog .metaCard p {
+  color: #ddd2f2;
+}
+
 body.theme-keychain .ship,
 body.theme-keychain .blankNote {
+  color: var(--muted);
+}
+
+body.theme-catalog .ship,
+body.theme-catalog .blankNote {
   color: var(--muted);
 }
 
@@ -376,9 +446,19 @@ body.theme-keychain .howTo {
   background: #1a2746;
 }
 
+body.theme-catalog .howTo {
+  border-color: rgba(242, 236, 255, 0.24);
+  background: #2a1f46;
+}
+
 body.theme-keychain .trustRow li {
   border-color: rgba(232, 238, 255, 0.24);
   background: #1b2f52;
+}
+
+body.theme-catalog .trustRow li {
+  border-color: rgba(242, 236, 255, 0.24);
+  background: #2d2148;
 }
 
 .howTo {
