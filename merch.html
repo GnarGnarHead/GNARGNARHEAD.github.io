@@ -1,6 +1,6 @@
 ---
-title: Bjarne Stroustrup Body Pillow Merch - GNARGNARHEAD
-description: Joke merch page for the legendary Bjarne Stroustrup body pillow with hotline ordering.
+title: GNARGNARHEAD Merch Catalog
+description: Browse cursed hotline merch drops including the Bjarne body pillow and Larry Wall keychain.
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -27,26 +27,41 @@ description: Joke merch page for the legendary Bjarne Stroustrup body pillow wit
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Bjarne Stroustrup Body Pillow",
+        "@type": "CollectionPage",
+        "name": "GNARGNARHEAD Merch Catalog",
         "description": "{{ page.description }}",
-        "image": "{{ site_url }}/photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_24_20%20PM-cropped.png",
         "url": "{{ canonical_url }}",
-        "brand": {
-          "@type": "Brand",
-          "name": "GNARGNARHEAD"
-        },
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "priceCurrency": "USD",
-          "price": "59.99"
-        }
+        "mainEntity": [
+          {
+            "@type": "Product",
+            "name": "Bjarne Stroustrup Body Pillow",
+            "url": "{{ site_url }}/merch-bjarne.html",
+            "image": "{{ site_url }}/photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_24_20%20PM-cropped.png",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "USD",
+              "price": "59.99"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Larry Wall Keychain",
+            "url": "{{ site_url }}/merch-keychain.html",
+            "image": "{{ site_url }}/photos/ChatGPT%20Image%20Feb%2021%2C%202026%2C%2002_05_41%20AM.jpg",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "USD",
+              "price": "19.99"
+            }
+          }
+        ]
       }
     </script>
   </head>
   <body>
-    <a class="skipLink" href="#main-content">Skip to merch details</a>
+    <a class="skipLink" href="#main-content">Skip to merch catalog</a>
     <header class="topNav">
       <a class="brand" href="index.html">GNARGNARHEAD MERCH</a>
       <nav class="navLinks" aria-label="Site">
@@ -61,10 +76,16 @@ description: Joke merch page for the legendary Bjarne Stroustrup body pillow wit
     </header>
 
     <main id="main-content" class="store">
-      <section class="productTop">
+      <nav class="pageSwitch" aria-label="Merch page switcher">
+        <a class="switchPill current" href="merch.html" aria-current="page">Merch Catalog</a>
+        <a class="switchPill" href="merch-bjarne.html">Bjarne Body Pillow</a>
+        <a class="switchPill" href="merch-keychain.html">Larry Wall Keychain</a>
+      </nav>
+
+      <section class="productTop" id="bjarne-drop">
         <figure class="heroShot">
           <p class="pillTag">Front Side</p>
-          <a href="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_24_20%20PM-cropped.png">
+          <a href="merch-bjarne.html">
             <img src="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_24_20%20PM-cropped.png" alt="Front-side design of joke Bjarne Stroustrup body pillow" width="1024" height="1230" loading="eager" fetchpriority="high" decoding="async">
           </a>
         </figure>
@@ -84,11 +105,11 @@ description: Joke merch page for the legendary Bjarne Stroustrup body pillow wit
 
           <div class="actions">
             <a class="btn primary" href="tel:+12125550137" aria-label="Call hotline at +1 (212) 555-0137">Call +1 (212) 555-0137</a>
-            <a class="btn secondary" href="#camp">Camp Mode Preview</a>
+            <a class="btn secondary" href="merch-bjarne.html">View Full Body Pillow Page</a>
           </div>
 
           <div class="howTo">
-            <h2>Phone Order Flow</h2>
+            <h2>Hotline Order Flow</h2>
             <ol>
               <li>Call the hotline today.</li>
               <li>Say "zero-cost abstractions."</li>
@@ -106,69 +127,76 @@ description: Joke merch page for the legendary Bjarne Stroustrup body pillow wit
         </section>
       </section>
 
-      <section id="camp" class="campSpotlight">
-        <div class="campCopy">
-          <h2>Be the Coolest Kid at Programming Camp</h2>
-          <p>
-            Bring this to camp and instantly gain main-character energy in every
-            coding lab, lounge, and late-night build session.
-          </p>
-          <ul>
-            <li>Conversation starter before breakfast standup</li>
-            <li>Elite lounge-item for post-debug recovery</li>
-            <li>Guaranteed to confuse and impress in equal measure</li>
-          </ul>
-          <p class="campNote">Camp edition status: hotline only, no normal checkout.</p>
-        </div>
-        <figure class="campImage">
-          <a href="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_08_23%20PM.png">
-            <img src="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_08_23%20PM.png" alt="Alternate-side design of joke Bjarne Stroustrup body pillow" width="1024" height="1536" loading="lazy" decoding="async">
+      <section class="productTop reverse" id="larry-drop">
+        <figure class="heroShot">
+          <p class="pillTag">Chaos Labs Drop</p>
+          <a href="merch-keychain.html">
+            <img src="photos/ChatGPT%20Image%20Feb%2021%2C%202026%2C%2002_05_41%20AM.jpg" alt="Idol-style promotional artwork showing a Larry Wall keychain in GNARGNARHEAD branding" width="1024" height="1536" loading="lazy" decoding="async">
           </a>
         </figure>
+
+        <section class="buyPanel">
+          <p class="kicker">Collector Joke Merch</p>
+          <h2>Larry Wall Keychain</h2>
+          <p class="subtitle">
+            Tiny pocket legend energy for backpacks, keyrings, and keyboard-bag
+            straps. Weeb-certified drop copy, hotline-certified checkout.
+          </p>
+
+          <div class="priceRow">
+            <span class="price">$19.99</span>
+            <span class="ship">Ships in 2-4 business chaos cycles</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="tel:+12125550137" aria-label="Call hotline at +1 (212) 555-0137">Call +1 (212) 555-0137</a>
+            <a class="btn secondary" href="merch-keychain.html">View Full Keychain Page</a>
+          </div>
+
+          <div class="howTo">
+            <h2>How This Drop Works</h2>
+            <ol>
+              <li>Call the hotline for stock check.</li>
+              <li>Say "autovivify-safe" to unlock lore mode.</li>
+              <li>Choose quantity and shipping coordinates.</li>
+              <li>Receive one pocket-sized coding relic.</li>
+            </ol>
+            <p class="phone">+1 (212) 555-0137</p>
+          </div>
+
+          <ul class="trustRow">
+            <li>No JS checkout</li>
+            <li>Hotline only</li>
+            <li>Chaos Labs approved</li>
+          </ul>
+        </section>
       </section>
 
       <section class="metaGrid">
         <article class="metaCard">
-          <h3>Specs</h3>
+          <h3>Current Drop List</h3>
           <ul>
-            <li>Desk-friendly long pillow profile</li>
-            <li>Cloud-blend synthetic fill</li>
-            <li>Washable removable cover</li>
-            <li>Approved for intense debugging sessions</li>
+            <li>Bjarne body pillow for full desk-level commitment</li>
+            <li>Larry keychain for pocket-sized meme deployment</li>
+            <li>Both items ordered through the same hotline</li>
+            <li>No cart, no tracking pixels, no algorithmic upsells</li>
           </ul>
         </article>
         <article class="metaCard">
-          <h3>Add-ons</h3>
+          <h3>Merch Lore</h3>
           <ul>
-            <li>Monospace gift note</li>
-            <li>Collector sticker pack</li>
-            <li>Night mode comfort bundle</li>
-            <li>Overconfident shipping label</li>
+            <li>Designed for coders, campers, and chaos enthusiasts</li>
+            <li>Energy: cursed but premium</li>
+            <li>Packaging: dramatic, probably over-labeled</li>
+            <li>Tone: jokes first, quality close second</li>
           </ul>
         </article>
         <article class="metaCard">
           <h3>FAQ</h3>
-          <p><b>Real?</b> Spiritually yes, legally joke merch.</p>
-          <p><b>Bulk orders?</b> Yes, teams are welcome.</p>
-          <p><b>Returns?</b> Only for semicolon defects.</p>
+          <p><b>Real products?</b> Yes. Real levels of unserious? Also yes.</p>
+          <p><b>Bundle deal?</b> Ask on the hotline and roleplay procurement.</p>
+          <p><b>Returns?</b> Accepted only for catastrophic semicolon incidents.</p>
         </article>
-      </section>
-
-      <section class="printBlank">
-        <div class="blankCopy">
-          <h2>Print Your Own Pillow Blank</h2>
-          <p>
-            Want to run your own cursed variant? Download the blank-ready panel
-            sheet and print your custom edition.
-          </p>
-          <a class="btn primary" href="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_22_24%20PM.png" download="bjarne-pillow-blank.png">Download Pillow Blank</a>
-          <p class="blankNote">Includes front and back panel layout in one file.</p>
-        </div>
-        <figure class="blankPreview">
-          <a href="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_22_24%20PM.png">
-            <img src="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_22_24%20PM.png" alt="Printable pillow blank with front and back panel layout" width="1024" height="1536" loading="lazy" decoding="async">
-          </a>
-        </figure>
       </section>
     </main>
 
