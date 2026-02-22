@@ -9,6 +9,7 @@ description: Dedicated joke merch page for the legendary Bjarne Stroustrup body 
     {% assign canonical_url = site_url | append: page.url %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description | escape }}">
     <meta name="robots" content="index,follow,max-image-preview:large">
@@ -148,6 +149,20 @@ description: Dedicated joke merch page for the legendary Bjarne Stroustrup body 
             <img src="photos/Bjarne/ChatGPT%20Image%20Feb%2019%2C%202026%2C%2004_22_24%20PM.png" alt="Printable pillow blank with front and back panel layout" width="1024" height="1536" loading="lazy" decoding="async">
           </a>
         </figure>
+      </section>
+
+      <section class="videoDock" aria-label="Paid promotion video">
+        <p class="promoTag">#PaidPromotion</p>
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/e7_2zoE4GkU?origin={{ site_url | url_encode }}&widget_referrer={{ canonical_url | url_encode }}"
+            title="Bjarne body pillow promo video"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
       </section>
     </main>
 

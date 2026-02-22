@@ -9,6 +9,7 @@ description: Dedicated merch page for the Larry Wall keychain with chaos-lab pro
     {% assign canonical_url = site_url | append: page.url %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description | escape }}">
     <meta name="robots" content="index,follow,max-image-preview:large">
@@ -155,6 +156,20 @@ description: Dedicated merch page for the Larry Wall keychain with chaos-lab pro
           <p><b>Bulk orders?</b> Yes, convention squads welcome.</p>
           <p><b>Returns?</b> Accepted for clasp defects or print misfires.</p>
         </article>
+      </section>
+
+      <section class="videoDock" aria-label="Paid promotion video">
+        <p class="promoTag">#PaidPromotion</p>
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/EldKU-sC-R4?origin={{ site_url | url_encode }}&widget_referrer={{ canonical_url | url_encode }}"
+            title="Larry Wall keychain trailer video"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
       </section>
     </main>
 
