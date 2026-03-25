@@ -38,6 +38,21 @@ GitHub Pages is GitHub’s free static hosting for websites built from a reposit
 - Create a new `something.html` in the repo root.
 - Link to it from `index.html` (and anywhere else you want it in the nav).
 
+### Add an album to `albums.html`
+
+- Put the source cover in `photos/Albums/`.
+- Create an optimized copy and keep the original until you confirm the result:
+  - `magick photos/Albums/ORIGINAL.jpg -strip -interlace Plane -quality 84 photos/Albums/ORIGINAL-optimized.jpg`
+- Use the optimized file in `albums.html`, not the original.
+- Update the manual count text (`Starting stack: N albums and counting.`).
+- Duplicate one existing `<div class="albumCard">...</div>` block inside `.albumGrid`.
+- For the new card:
+  - set the Discogs URL on the `<a>`
+  - set the album title in `aria-label` and `alt`
+  - set the optimized image path in `src`
+  - set the image `width` and `height` to the real file dimensions
+- After confirming the optimized cover looks good, delete the original source file so `photos/Albums/` only contains the optimized versions.
+
 ### Add a blog post
 
 - Copy `blogs/_template.md` → rename it (example: `blogs/2026-02-02-my-post.md`)

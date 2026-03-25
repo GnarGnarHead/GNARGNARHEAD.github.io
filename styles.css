@@ -229,6 +229,51 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   margin-bottom: 6px;
 }
 
+.albumGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
+  gap: 14px;
+  justify-content: start;
+  margin-top: 12px;
+}
+
+.albumCard {
+  border: 3px ridge rgba(255, 255, 255, 0.55);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.albumLink {
+  display: block;
+  line-height: 0;
+}
+
+.albumLink:hover,
+.albumLink:focus-visible {
+  background: transparent;
+}
+
+.albumLink:focus-visible {
+  outline: 3px dotted #ffff00;
+  outline-offset: 4px;
+}
+
+.albumCover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px ridge rgba(255, 255, 255, 0.65);
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.albumLink:hover .albumCover,
+.albumLink:focus-visible .albumCover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.35), 0 0 24px rgba(255, 0, 255, 0.22);
+}
+
 .postList {
   list-style: none;
   margin: 0;
