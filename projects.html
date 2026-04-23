@@ -97,21 +97,6 @@ description: Auto-updated list of GNARGNARHEAD public GitHub repositories, exper
           <div class="panel">
             <div class="panelTitle">PUBLIK PROJEKTS</div>
             <div class="grid">
-              <div class="card">
-                <div class="cardTitle">WHACKER</div>
-                <div class="small">
-                  Spin-heavy Pong with style-based AI, paddle tuning, and skill growth, wrapped in a playable onboarding-to-hub story slice.
-                  <div class="tiny">
-                    The public repo also includes the wider three-act Season 1 structure, cast writeups, and art that sit around the current vertical slice.
-                  </div>
-                  <div class="tiny">
-                    <b>Page:</b> <a href="whacker.html">whacker.html</a>
-                    <span class="sep">|</span>
-                    <b>Repo:</b> <a href="https://github.com/GnarGnarHead/Whacker" target="_blank" rel="noreferrer">GnarGnarHead/Whacker</a>
-                  </div>
-                </div>
-              </div>
-
               {% assign repos = site.github.public_repositories | where: "fork", false | sort: "pushed_at" | reverse %}
               {% for repo in repos %}
                 <div class="card">
