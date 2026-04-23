@@ -228,6 +228,23 @@ code {
   max-width: 74ch;
 }
 
+.playHint {
+  margin: 2px 0 0;
+  max-width: 62ch;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(115, 233, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(30, 21, 53, 0.96), rgba(14, 10, 28, 0.98));
+  color: var(--muted);
+  box-shadow: var(--glow);
+}
+
+.playHint b {
+  color: var(--ink);
+}
+
 .heroBody p,
 .sectionHead p,
 .featureCard p,
