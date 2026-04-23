@@ -165,6 +165,20 @@ description: Personal website with open-source projects, photography, and blog p
 	                </div>
 	              </div>
 		              <div class="card">
+		                <div class="cardTitle">WHACKER [WIP]</div>
+		                <div class="small">
+		                  <div class="tiny">
+		                    <span class="blink">NEW:</span> unfinished game autopsy page now live.
+		                  </div>
+		                  <div class="tiny">
+		                    <a href="whacker.html">OPEN THE WHACKER EXHIBIT</a>
+		                  </div>
+		                  <a href="whacker.html">
+		                    <img class="media mediaThumb" src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/Screenshot_20260216_014042.png" alt="Archived Whacker gameplay screenshot thumbnail" width="1920" height="1080" loading="lazy" decoding="async">
+		                  </a>
+		                </div>
+		              </div>
+		              <div class="card">
 		                <div class="cardTitle">LATEST BLOG</div>
 		                <div class="small">
 		                  {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
@@ -204,6 +218,7 @@ description: Personal website with open-source projects, photography, and blog p
             </div>
             <ul class="list">
               <li><a href="projects.html">Projects: auto-updated public repos and experiments</a></li>
+              <li><a href="whacker.html">Whacker [WIP]: autopsy page for the unfinished GPT-5.2 build</a></li>
               <li><a href="photography.html">Photography: portrait + street contact sheets</a></li>
               <li><a href="albums.html">Albums: favorite records with clickable Discogs covers</a></li>
               <li><a href="blogs/index.html">Blog / Rants: build logs, notes, and one-liners</a></li>
