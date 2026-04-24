@@ -132,6 +132,7 @@ code {
 }
 
 .panel {
+  position: relative;
   border-radius: 22px;
 }
 
@@ -141,6 +142,29 @@ code {
   gap: 20px;
   padding: 24px;
   align-items: stretch;
+  overflow: visible;
+}
+
+.sticker {
+  position: absolute;
+  z-index: 5;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(4px 5px 0 rgba(5, 4, 15, 0.5));
+}
+
+.stickerWhackerSkate {
+  top: -26px;
+  right: -24px;
+  width: 145px;
+  transform: rotate(8deg);
+}
+
+.stickerWhackerMetal {
+  left: -22px;
+  bottom: -30px;
+  width: 135px;
+  transform: rotate(-9deg);
 }
 
 .sectionPanel {
@@ -761,6 +785,10 @@ code {
   .heroPanel,
   .sectionPanel {
     padding: 16px;
+  }
+
+  .sticker {
+    width: 92px;
   }
 
   .featureGrid,

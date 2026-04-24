@@ -188,6 +188,21 @@ a:hover {
   position: relative;
 }
 
+.sticker {
+  position: absolute;
+  z-index: 4;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(4px 5px 0 rgba(14, 14, 16, 0.22));
+}
+
+.stickerPhotoBooth {
+  right: -34px;
+  bottom: -34px;
+  width: 118px;
+  transform: rotate(-8deg);
+}
+
 .stamp {
   position: absolute;
   top: 14px;
@@ -552,6 +567,11 @@ a:hover {
 
   .photo img {
     height: 200px;
+  }
+
+  .sticker {
+    width: 86px;
+    right: -10px;
   }
 
   .contactSheet {

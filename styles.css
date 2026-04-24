@@ -33,6 +33,7 @@ body {
 }
 
 .header {
+  position: relative;
   text-align: center;
   background: linear-gradient(180deg, rgba(255, 0, 255, 0.25), rgba(0, 255, 255, 0.15));
   border-bottom: 4px ridge #00ff66;
@@ -101,6 +102,7 @@ body {
 }
 
 .panel {
+  position: relative;
   background: rgba(0, 0, 0, 0.55);
   border: 4px ridge #00ffff;
   margin: 10px 0;
@@ -425,6 +427,78 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   color: #ffff00;
 }
 
+.sticker {
+  position: absolute;
+  z-index: 4;
+  width: 120px;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.45));
+}
+
+.stickerHomeGas {
+  top: -36px;
+  right: -26px;
+  width: 136px;
+  transform: rotate(7deg);
+}
+
+.stickerHomeChibi {
+  right: -24px;
+  bottom: -34px;
+  width: 104px;
+  transform: rotate(-8deg);
+}
+
+.stickerHomePixel {
+  left: -22px;
+  top: -30px;
+  width: 86px;
+  transform: rotate(5deg);
+}
+
+.stickerBlogBookplate {
+  right: -28px;
+  top: -24px;
+  width: 124px;
+  transform: rotate(6deg);
+}
+
+.stickerPetReward {
+  right: -30px;
+  top: -32px;
+  width: 118px;
+  transform: rotate(9deg);
+}
+
+.stickerStuffPhoto {
+  right: -28px;
+  top: -42px;
+  width: 122px;
+  transform: rotate(-7deg);
+}
+
+.stickerStuffTransit {
+  left: -32px;
+  bottom: -26px;
+  width: 104px;
+  transform: rotate(10deg);
+}
+
+.stickerAlbumsTourist {
+  right: -30px;
+  top: -26px;
+  width: 132px;
+  transform: rotate(-6deg);
+}
+
+.sticker404Warning {
+  right: -22px;
+  top: -42px;
+  width: 132px;
+  transform: rotate(8deg);
+}
+
 .footer {
   text-align: center;
   background: rgba(255, 255, 0, 0.08);
@@ -444,6 +518,14 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   .title { font-size: 42px; }
   .nav { border-right: none; border-bottom: 4px ridge #ff00ff; }
   .twoCol, .grid { grid-template-columns: 1fr; }
+  .sticker { width: 86px; }
+  .stickerHomeGas,
+  .stickerHomeChibi,
+  .stickerStuffPhoto,
+  .stickerAlbumsTourist,
+  .sticker404Warning {
+    right: -8px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
