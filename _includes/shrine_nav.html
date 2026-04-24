@@ -1,0 +1,55 @@
+{% assign nav_base = include.base | default: "" %}
+{% assign current = include.current | default: "" %}
+{% assign home_href = nav_base | append: "index.html" %}
+<div class="panel">
+  <div class="panelTitle">NAVIGASHUN</div>
+  <a class="btn{% if current == 'home' %} current{% endif %}" href="{{ home_href }}">HOME</a>
+  <a class="btn" href="{{ home_href }}#about">ABOUT ME</a>
+  <a class="btn" href="{{ home_href }}#now">NOW</a>
+  <a class="btn{% if current == 'projects' %} current{% endif %}" href="{{ nav_base }}projects.html">PROJECTS</a>
+  <a class="btn{% if current == 'whacker' %} current{% endif %}" href="{{ nav_base }}whacker.html">WHACKER</a>
+  <a class="btn{% if current == 'photography' %} current{% endif %}" href="{{ nav_base }}photography.html">PHOTOGRAPHY</a>
+  <a class="btn{% if current == 'albums' %} current{% endif %}" href="{{ nav_base }}albums.html">ALBUMS</a>
+  <a class="btn{% if current == 'blog' %} current{% endif %}" href="{{ nav_base }}blogs/index.html">BLOG / RANTS</a>
+  <a class="btn{% if current == 'pet' %} current{% endif %}" href="{{ nav_base }}pet.html">VIRTUAL PET</a>
+  <a class="btn{% if current == 'stuff' %} current{% endif %}" href="{{ nav_base }}stuff.html">LINKS &amp; STUFF</a>
+  <a class="btn{% if current == 'merch' %} current{% endif %}" href="{{ nav_base }}merch.html">MERCH</a>
+  <a class="btn{% if current == 'map' %} current{% endif %}" href="{{ nav_base }}shrine-map.html">SHRINE MAP</a>
+  <a class="btn{% if current == 'contact' %} current{% endif %}" href="{{ nav_base }}contact.html">CONTACT</a>
+  <a class="btn" href="{{ home_href }}#faq">FAQ</a>
+  <hr class="hr">
+  <div class="mini">
+    {% case current %}
+      {% when "home" %}
+        <div><b>VISIT0R COUNT:</b> <span class="counter">0001337</span></div>
+        <div><b>LAST UPD8D:</b> <span class="counter">2026-04-24</span></div>
+        <div><b>VIBE CHECK:</b> <span class="counter">UNSAFE</span></div>
+      {% when "projects" %}
+        <div><b>FULL REPO LIST:</b></div>
+        <div><a href="https://github.com/gnargnarhead?tab=repositories" target="_blank" rel="noreferrer">github.com/gnargnarhead</a></div>
+      {% when "albums" %}
+        <div><b>FORMAT:</b> <span class="counter">COVERS ONLY</span></div>
+        <div><b>LINK OUT:</b> <span class="counter">DISCOGS</span></div>
+      {% when "blog" %}
+        <div><b>POST ENGINE:</b> <span class="counter">MARKDOWN</span></div>
+        <div><b>OPINION VOLTAGE:</b> <span class="counter">HIGH</span></div>
+      {% when "pet" %}
+        <div><b>PET STATUS:</b> <span class="counter">SLEEPING</span></div>
+        <div><b>ENERGY:</b> <span class="counter">ZZ TOP</span></div>
+      {% when "stuff" %}
+        <div><b>MODE:</b> <span class="counter">DESK JUNK</span></div>
+        <div><b>WALLPAPER:</b> <span class="counter">YES</span></div>
+      {% when "map" %}
+        <div><b>ZONES:</b> <span class="counter">ALL OF EM</span></div>
+        <div><b>EXIT:</b> <span class="counter">UNMARKED</span></div>
+      {% when "contact" %}
+        <div><b>REPLY WINDOW:</b> <span class="counter">2-5 days</span></div>
+        <div><b>FORM STATUS:</b> <span class="counter">OPEN</span></div>
+      {% when "notfound" %}
+        <div><b>ERROR CODE:</b> <span class="counter">404</span></div>
+        <div><b>MAP STATUS:</b> <span class="counter">PANIC</span></div>
+      {% else %}
+        <div><b>SHRINE:</b> <span class="counter">ONLINE</span></div>
+    {% endcase %}
+  </div>
+</div>

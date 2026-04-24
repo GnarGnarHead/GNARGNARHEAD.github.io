@@ -57,22 +57,7 @@
 
       <tr>
         <td class="nav" valign="top" width="220">
-          <div class="panel">
-            <div class="panelTitle">NAVIGATION</div>
-            <a class="btn" href="{{ '/index.html' | relative_url }}">HOME</a>
-            <a class="btn" href="{{ '/index.html#about' | relative_url }}">ABOUT ME</a>
-            <a class="btn" href="{{ '/index.html#now' | relative_url }}">NOW</a>
-            <a class="btn" href="{{ '/projects.html' | relative_url }}">PROJECTS</a>
-            <a class="btn" href="{{ '/whacker.html' | relative_url }}">WHACKER</a>
-            <a class="btn" href="{{ '/photography.html' | relative_url }}">PHOTOGRAPHY</a>
-            <a class="btn" href="{{ '/albums.html' | relative_url }}">ALBUMS</a>
-            <a class="btn current" href="{{ '/blogs/index.html' | relative_url }}">BLOG / RANTS</a>
-            <a class="btn" href="{{ '/pet.html' | relative_url }}">VIRTUAL PET</a>
-            <a class="btn" href="{{ '/stuff.html' | relative_url }}">LINKS &amp; STUFF</a>
-            <a class="btn" href="{{ '/merch.html' | relative_url }}">MERCH</a>
-            <a class="btn" href="{{ '/contact.html' | relative_url }}">CONTACT</a>
-            <a class="btn" href="{{ '/index.html#faq' | relative_url }}">FAQ</a>
-          </div>
+          {% include shrine_nav.html current="blog" base="../" %}
         </td>
 
         <td class="content" valign="top">

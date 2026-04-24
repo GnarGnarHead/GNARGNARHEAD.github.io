@@ -59,27 +59,7 @@ description: Favorite albums from GNARGNARHEAD's cyber shrine, shown as clickabl
 
       <tr>
         <td class="nav" valign="top" width="220">
-          <div class="panel">
-            <div class="panelTitle">NAVIGASHUN</div>
-            <a class="btn" href="index.html">HOME</a>
-            <a class="btn" href="index.html#about">ABOUT ME</a>
-            <a class="btn" href="index.html#now">NOW</a>
-            <a class="btn" href="projects.html">PROJECTS</a>
-            <a class="btn" href="whacker.html">WHACKER</a>
-            <a class="btn" href="photography.html">PHOTOGRAPHY</a>
-            <a class="btn current" href="albums.html">ALBUMS</a>
-            <a class="btn" href="blogs/index.html">BLOG / RANTS</a>
-            <a class="btn" href="pet.html">VIRTUAL PET</a>
-            <a class="btn" href="stuff.html">LINKS &amp; STUFF</a>
-            <a class="btn" href="merch.html">MERCH</a>
-            <a class="btn" href="contact.html">CONTACT</a>
-            <a class="btn" href="index.html#faq">FAQ</a>
-            <hr class="hr">
-            <div class="mini">
-              <div><b>FORMAT:</b> <span class="counter">COVERS ONLY</span></div>
-              <div><b>LINK OUT:</b> <span class="counter">DISCOGS</span></div>
-            </div>
-          </div>
+          {% include shrine_nav.html current="albums" base="" %}
         </td>
 
         <td class="content" valign="top">
@@ -231,6 +211,7 @@ description: Favorite albums from GNARGNARHEAD's cyber shrine, shown as clickabl
                 <li><a href="photography.html">Photography (contact sheets and assignment terms)</a></li>
                 <li><a href="blogs/index.html">Blog / Rants (latest writeups)</a></li>
                 <li><a href="stuff.html">Links &amp; Stuff (gear, setup notes, and wallpaper)</a></li>
+                <li><a href="shrine-map.html">Shrine Map (all corridors indexed)</a></li>
               </ul>
             </div>
           </div>

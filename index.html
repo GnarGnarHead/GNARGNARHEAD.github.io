@@ -9,7 +9,7 @@ description: Personal website with open-source projects, photography, and blog p
     {% assign canonical_url = site_url | append: page.url | replace: "index.html", "" %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} | Projects, Whacker, Photography, Albums, Blog, Virtual Pet, Links & Stuff, Merch, Contact</title>
+    <title>{{ page.title }} | Projects, Whacker, Photography, Albums, Blog, Virtual Pet, Links & Stuff, Merch, Shrine Map, Contact</title>
     <meta name="description" content="{{ page.description | escape }}">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="{{ canonical_url }}">
@@ -59,27 +59,7 @@ description: Personal website with open-source projects, photography, and blog p
 
       <tr>
         <td class="nav" valign="top" width="220">
-          <div class="panel">
-            <div class="panelTitle">NAVIGASHUN</div>
-            <a class="btn" href="#about">ABOUT ME</a>
-            <a class="btn" href="#now">NOW</a>
-            <a class="btn" href="projects.html">PROJECTS</a>
-            <a class="btn" href="whacker.html">WHACKER</a>
-            <a class="btn" href="photography.html">PHOTOGRAPHY</a>
-            <a class="btn" href="albums.html">ALBUMS</a>
-            <a class="btn" href="blogs/index.html">BLOG / RANTS</a>
-            <a class="btn" href="pet.html">VIRTUAL PET</a>
-            <a class="btn" href="stuff.html">LINKS &amp; STUFF</a>
-            <a class="btn" href="merch.html">MERCH</a>
-            <a class="btn" href="contact.html">CONTACT</a>
-            <a class="btn" href="#faq">FAQ</a>
-            <hr class="hr">
-            <div class="mini">
-              <div><b>VISIT0R COUNT:</b> <span class="counter">0001337</span></div>
-              <div><b>LAST UPD8D:</b> <span class="counter">2026-02-02</span></div>
-            </div>
-          </div>
-
+          {% include shrine_nav.html current="home" base="" %}
         </td>
 
         <td class="content" valign="top">
@@ -100,7 +80,7 @@ description: Personal website with open-source projects, photography, and blog p
 
               <div class="box">
                 <div class="small">
-                  <b>STATUS:</b> building an over-the-top 90’s vibe MVP for GitHub Pages.
+                  <b>STATUS:</b> maintaining a deliberately overbuilt 90’s web shrine for GitHub Pages.
                 </div>
                 <ul class="list">
                   <li>Neon? yes.</li>
@@ -114,10 +94,27 @@ description: Personal website with open-source projects, photography, and blog p
           <div id="now" class="panel">
             <div class="panelTitle">NOW</div>
             <marquee class="marq inner" scrollamount="7">
-              UPDATE: SITE IS ALIVE • ADD MORE PAGES LATER • FIND COOL GIFS • PRINT THIS PAGE OUT AND HANG IT ON THE WALL
+              UPDATE: SITE IS ALIVE • MAP ROOM INSTALLED • BUTTON WALL POLISHED • PRINT THIS PAGE OUT AND HANG IT ON THE WALL
             </marquee>
             <div class="small">
               <b>Today’s mood:</b> <span class="hot">MAXIMUM Y2K ENERGY</span>
+            </div>
+            <div class="statusStack">
+              <div class="statusItem"><b>Build:</b> <span class="counter">STATIC</span></div>
+              <div class="statusItem"><b>Scripts:</b> <span class="counter">NO CORE JS</span></div>
+              <div class="statusItem"><b>Layout:</b> <span class="counter">TABLE LOYAL</span></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">BUTTON WALL</div>
+            <div class="badgeWall" aria-label="Site badges">
+              <span class="siteButton">NO JS CORE</span>
+              <span class="siteButton">BEST @ 800x600</span>
+              <span class="siteButton">GITHUB PAGES</span>
+              <span class="siteButton">TABLE LAYOUT</span>
+              <span class="siteButton">NEON DAMAGE</span>
+              <span class="siteButton">HAND LINKED</span>
             </div>
           </div>
 
@@ -212,6 +209,34 @@ description: Personal website with open-source projects, photography, and blog p
 		                  </div>
 		                </div>
 		              </div>
+                  <div class="card">
+                    <div class="cardTitle">SHRINE MAP</div>
+                    <div class="small">
+                      <div class="tiny">
+                        <span class="blink">NEW:</span> every known corridor, indexed for your convenience and mild concern.
+                      </div>
+                      <div class="tiny">
+                        <a href="shrine-map.html">OPEN THE MAP ROOM</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">CHANGELOG</div>
+            <div class="small">
+              <div class="statusStack">
+                <div class="statusItem">
+                  <b>2026-04-24:</b> shared nav include, shrine map, 404 corridor, reduced-motion polish.
+                </div>
+                <div class="statusItem">
+                  <b>2026-04-23:</b> Whacker screenshots and public release page linked from home.
+                </div>
+                <div class="statusItem">
+                  <b>Always:</b> more buttons than strictly necessary.
+                </div>
+              </div>
             </div>
           </div>
 
@@ -227,7 +252,9 @@ description: Personal website with open-source projects, photography, and blog p
               <li><a href="albums.html">Albums: favorite records with clickable Discogs covers</a></li>
               <li><a href="blogs/index.html">Blog / Rants: build logs, notes, and one-liners</a></li>
               <li><a href="pet.html">Virtual Pet: check in on the cat (still sleeping)</a></li>
+              <li><a href="stuff.html">Links &amp; Stuff: links, gear, setup notes, and wallpaper downloads</a></li>
               <li><a href="merch.html">Merch: cursed hotline catalog (body pillow + keychain)</a></li>
+              <li><a href="shrine-map.html">Shrine Map: every zone arranged into one navigable mess</a></li>
               <li><a href="contact.html">Contact: send a message through the Google Form</a></li>
             </ul>
           </div>

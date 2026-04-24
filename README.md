@@ -16,6 +16,8 @@ GitHub Pages is GitHub’s free static hosting for websites built from a reposit
 - Most pages are plain HTML files in the repo root (`index.html`, `projects.html`, etc.).
 - The blog uses Markdown files in `blogs/` with YAML front matter and layouts in `_layouts/` (GitHub Pages builds these with Jekyll).
 - `projects.html` auto-lists public repos at build time using Jekyll’s GitHub metadata (`site.github.public_repositories`) — no JS, no manual list.
+- The shared shrine sidebar navigation lives in `_includes/shrine_nav.html`; pass a `current` value from each table-layout page.
+- `shrine-map.html` is the human-facing directory, and `404.html` is the custom missing-page corridor.
 - Images live in `photos/`.
 
 ## Basic Workflow (Edit → Push → View)
@@ -31,12 +33,13 @@ GitHub Pages is GitHub’s free static hosting for websites built from a reposit
 ### Update a page
 
 - Edit an existing `.html` file (for example `index.html`).
-- Keep navigation links consistent across pages.
+- For table-layout shrine pages, use `_includes/shrine_nav.html` instead of copying the sidebar nav by hand.
+- If you add a new major page, add it to `_includes/shrine_nav.html`, `shrine-map.html`, and any polished-zone top navs that should link to it.
 
 ### Add a new page
 
 - Create a new `something.html` in the repo root.
-- Link to it from `index.html` (and anywhere else you want it in the nav).
+- Link to it from `index.html`, `_includes/shrine_nav.html`, and `shrine-map.html` if it is a main zone.
 
 ### Add an album to `albums.html`
 

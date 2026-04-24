@@ -1,0 +1,113 @@
+---
+title: 404 - Corridor Not Found
+description: The GNARGNARHEAD cyber shrine could not find this corridor.
+permalink: /404.html
+sitemap: false
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    {% assign site_url = site.url | default: "https://gnargnarhead.github.io" %}
+    {% assign canonical_url = site_url | append: page.url %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta name="robots" content="noindex,follow">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:site_name" content="GNARGNARHEAD Cyber Shrine">
+    <meta property="og:image" content="{{ site_url }}/photos/setup-rendering.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | escape }}">
+    <meta name="twitter:description" content="{{ page.description | escape }}">
+    <meta name="twitter:image" content="{{ site_url }}/photos/setup-rendering.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <marquee behavior="alternate" scrollamount="12" class="marq top">
+      ★★★ 404 CORRIDOR COLLAPSE ★★★ LOCAL REALITY NOT FOUND ★★★
+    </marquee>
+
+    <table class="layout" cellspacing="0" cellpadding="10" border="6" align="center">
+      <tr>
+        <td colspan="2" class="header">
+          <div class="kicker">~*~ HYPERLINK DAMAGE REPORT ~*~</div>
+          <h1 class="title rainbow">404</h1>
+          <div class="sub">
+            <span class="blink">PAGE NOT FOUND</span>
+            <span class="sep">|</span>
+            <span class="blink2">THE URL HAS BAD VIBES</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="nav" valign="top" width="220">
+          {% include shrine_nav.html current="notfound" base="/" %}
+        </td>
+
+        <td class="content" valign="top">
+          <div class="panel errorPanel">
+            <div class="panelTitle">TRANSMISSION FAILED</div>
+            <pre class="ascii errorAscii">
+   __________________________
+  /  THE CORRIDOR ENDS HERE  \
+  |  CHECK URL OR TURN BACK  |
+  \__________________________/
+
+       [ ERROR TERMINAL ]
+       C:\SHRINE\VOID&gt; _
+       SIGNAL: 404 / 404
+       ROUTE:  DISCONNECTED
+            </pre>
+            <div class="small">
+              The shrine checked the dusty directory cabinet and could not find that page.
+              It may have moved, never existed, or been typed while the monitor was making that high-pitched noise.
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">RECOVERY LINKS</div>
+            <div class="mapGrid compactMap">
+              <a class="mapNode homeNode" href="{{ '/index.html' | relative_url }}">
+                <span class="nodeCode">SAFE</span>
+                <span class="nodeTitle">Return Home</span>
+                <span class="nodeText">Back to the front desk.</span>
+              </a>
+              <a class="mapNode" href="{{ '/shrine-map.html' | relative_url }}">
+                <span class="nodeCode">MAP</span>
+                <span class="nodeTitle">Open Shrine Map</span>
+                <span class="nodeText">See every known corridor.</span>
+              </a>
+              <a class="mapNode" href="{{ '/blogs/index.html' | relative_url }}">
+                <span class="nodeCode">LOG</span>
+                <span class="nodeTitle">Read Blog / Rants</span>
+                <span class="nodeText">Words usually survive bad links.</span>
+              </a>
+              <a class="mapNode" href="{{ '/contact.html' | relative_url }}">
+                <span class="nodeCode">HELP</span>
+                <span class="nodeTitle">Contact</span>
+                <span class="nodeText">Report the broken hallway.</span>
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">
+          <marquee behavior="alternate" scrollamount="9" class="marq bottom">
+            ✦ THIS ERROR PAGE IS PROBABLY MORE DECORATED THAN THE PAGE YOU WANTED ✦
+          </marquee>
+          <div class="tiny">
+            © 1999 GNARGNARHEAD • rebuilt from: missing hrefs
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

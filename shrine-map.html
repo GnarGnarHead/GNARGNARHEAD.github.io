@@ -1,0 +1,171 @@
+---
+title: Shrine Map - GNARGNARHEAD
+description: A loud old-web map of every zone in the GNARGNARHEAD cyber shrine.
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    {% assign site_url = site.url | default: "https://gnargnarhead.github.io" %}
+    {% assign canonical_url = site_url | append: page.url %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:site_name" content="GNARGNARHEAD Cyber Shrine">
+    <meta property="og:image" content="{{ site_url }}/photos/setup-rendering.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | escape }}">
+    <meta name="twitter:description" content="{{ page.description | escape }}">
+    <meta name="twitter:image" content="{{ site_url }}/photos/setup-rendering.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "{{ page.title }}",
+        "url": "{{ canonical_url }}",
+        "description": "{{ page.description }}",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "GNARGNARHEAD Cyber Shrine",
+          "url": "{{ site_url }}/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <marquee behavior="alternate" scrollamount="12" class="marq top">
+      ★★★ SHRINE MAP ★★★ YOU ARE HERE, PROBABLY ★★★
+    </marquee>
+
+    <table class="layout" cellspacing="0" cellpadding="10" border="6" align="center">
+      <tr>
+        <td colspan="2" class="header">
+          <div class="kicker">~*~ COMPLETE SITE CARTOGRAPHY ~*~</div>
+          <h1 class="title rainbow">SHRINE MAP</h1>
+          <div class="sub">
+            <span class="blink">ALL CORRIDORS INDEXED</span>
+            <span class="sep">|</span>
+            <span class="blink2">NO WARRANTY IMPLIED</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="nav" valign="top" width="220">
+          {% include shrine_nav.html current="map" base="" %}
+        </td>
+
+        <td class="content" valign="top">
+          <div class="panel">
+            <div class="panelTitle">YOU ARE IN THE INDEX ROOM</div>
+            <div class="small">
+              This is the whole shrine at a glance. The site is intentionally handmade, so this page is the official defense against getting pleasantly lost.
+            </div>
+            <div class="warningTape">FOLLOW THE BLINKING SIGNS • IGNORE THE WALL NOISE • DO NOT NORMALIZE THE NAVIGATION</div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">PRIMARY ZONES</div>
+            <div class="mapGrid">
+              <a class="mapNode homeNode" href="index.html">
+                <span class="nodeCode">00</span>
+                <span class="nodeTitle">Home</span>
+                <span class="nodeText">The front desk, newz pile, fake counter, and main blast radius.</span>
+              </a>
+              <a class="mapNode" href="projects.html">
+                <span class="nodeCode">01</span>
+                <span class="nodeTitle">Projects</span>
+                <span class="nodeText">Public repo telemetry, experiments, and software contraptions.</span>
+              </a>
+              <a class="mapNode" href="whacker.html">
+                <span class="nodeCode">02</span>
+                <span class="nodeTitle">Whacker</span>
+                <span class="nodeText">Spin Pong, style builds, story mode, and live screenshots from the game.</span>
+              </a>
+              <a class="mapNode" href="blogs/index.html">
+                <span class="nodeCode">03</span>
+                <span class="nodeTitle">Blog / Rants</span>
+                <span class="nodeText">Markdown thoughts, build notes, tiny posts, and essay-shaped electrical noise.</span>
+              </a>
+              <a class="mapNode" href="photography.html">
+                <span class="nodeCode">04</span>
+                <span class="nodeTitle">Photography</span>
+                <span class="nodeText">The serious-ish gallery wing: liminal Japan streets and print/booking notes.</span>
+              </a>
+              <a class="mapNode" href="albums.html">
+                <span class="nodeCode">05</span>
+                <span class="nodeTitle">Albums</span>
+                <span class="nodeText">Clickable record covers wired straight into Discogs.</span>
+              </a>
+              <a class="mapNode" href="pet.html">
+                <span class="nodeCode">06</span>
+                <span class="nodeTitle">Virtual Pet</span>
+                <span class="nodeText">George is sleeping. This remains the core mechanic.</span>
+              </a>
+              <a class="mapNode" href="stuff.html">
+                <span class="nodeCode">07</span>
+                <span class="nodeTitle">Links &amp; Stuff</span>
+                <span class="nodeText">Bookmarks, wallpaper, setup image, desk junk, and assorted static debris.</span>
+              </a>
+              <a class="mapNode" href="merch.html">
+                <span class="nodeCode">08</span>
+                <span class="nodeTitle">Merch</span>
+                <span class="nodeText">Hotline catalog, fake-commerce energy, real commitment to the bit.</span>
+              </a>
+              <a class="mapNode" href="contact.html">
+                <span class="nodeCode">09</span>
+                <span class="nodeTitle">Contact</span>
+                <span class="nodeText">The form. The official wire. The ritual exit door.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">SITE BUTTON WALL</div>
+            <div class="badgeWall" aria-label="Site badges">
+              <span class="siteButton">NO JS CORE</span>
+              <span class="siteButton">TABLE SAFE</span>
+              <span class="siteButton">800x600 CLUB</span>
+              <span class="siteButton">GIF FRIENDLY</span>
+              <span class="siteButton">PAGES READY</span>
+              <span class="siteButton">ALT TEXT INSIDE</span>
+              <span class="siteButton">NEON CERTIFIED</span>
+              <span class="siteButton">ABSURD HTML</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">SECRETLY PRACTICAL</div>
+            <div class="small">
+              The joke is loud, but the wiring is boring in a good way:
+              <ul class="list">
+                <li>Static GitHub Pages files.</li>
+                <li>Jekyll builds the blog and project list.</li>
+                <li>Images use explicit dimensions and lazy loading where it matters.</li>
+                <li>The sitemap is generated automatically.</li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">
+          <marquee behavior="alternate" scrollamount="9" class="marq bottom">
+            ✦ MAP UPDATED BY HAND • DO NOT FOLD, SPINDLE, OR NORMALIZE ✦
+          </marquee>
+          <div class="tiny">
+            © 1999 GNARGNARHEAD • cartography by: blinking rectangles
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
