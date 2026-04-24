@@ -403,94 +403,6 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   overflow-x: auto;
 }
 
-.warningTape {
-  margin-top: 10px;
-  padding: 8px 10px;
-  color: #000;
-  background:
-    repeating-linear-gradient(45deg, #ffff00 0 12px, #ff8a00 12px 24px);
-  border: 3px ridge #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-.mapGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.mapNode {
-  display: flex;
-  flex-direction: column;
-  min-height: 150px;
-  padding: 10px;
-  color: #b7ffb7;
-  text-decoration: none;
-  border: 3px ridge rgba(255, 255, 255, 0.6);
-  background:
-    linear-gradient(180deg, rgba(0, 255, 255, 0.12), rgba(255, 0, 255, 0.10)),
-    rgba(0, 0, 0, 0.48);
-  box-sizing: border-box;
-}
-
-.mapNode:visited {
-  color: #b7ffb7;
-}
-
-.mapNode:hover,
-.mapNode:focus-visible {
-  color: #000;
-  background:
-    linear-gradient(180deg, #00ffff, #ffff00);
-  border-style: inset;
-}
-
-.nodeCode {
-  align-self: flex-start;
-  margin-bottom: 8px;
-  padding: 2px 6px;
-  color: #000;
-  background: #ffff00;
-  border: 2px inset rgba(255, 255, 255, 0.7);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.nodeTitle {
-  display: block;
-  color: #ff00ff;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.35);
-}
-
-.mapNode:hover .nodeTitle,
-.mapNode:focus-visible .nodeTitle {
-  color: #000;
-  text-shadow: none;
-}
-
-.nodeText {
-  display: block;
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.35;
-}
-
-.homeNode {
-  border-color: #ffff00 #00ffff #00ff66 #ff00ff;
-}
-
-.compactMap .mapNode {
-  min-height: 112px;
-}
-
 .statusStack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -532,8 +444,6 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   .title { font-size: 42px; }
   .nav { border-right: none; border-bottom: 4px ridge #ff00ff; }
   .twoCol, .grid { grid-template-columns: 1fr; }
-  .mapGrid { grid-template-columns: 1fr; }
-  .mapNode { min-height: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
