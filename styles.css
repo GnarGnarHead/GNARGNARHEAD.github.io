@@ -492,25 +492,33 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 }
 
 .badgeWall {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
 }
 
 .siteButton {
-  min-height: 31px;
-  padding: 5px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 31px;
+  padding: 2px 4px;
   color: #000;
   background:
-    linear-gradient(180deg, #ffffff 0 20%, #00ffff 20% 48%, #ff00ff 48% 76%, #ffff00 76%);
-  border: 3px outset rgba(255, 255, 255, 0.88);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    linear-gradient(180deg, #ffffff 0 7px, #00ffff 7px 15px, #ff00ff 15px 23px, #ffff00 23px 31px);
+  border: 2px outset rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.55),
+    0 0 0 2px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
-  font-size: 11px;
+  font-size: 8px;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .statusStack {
