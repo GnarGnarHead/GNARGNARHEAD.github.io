@@ -81,6 +81,13 @@ body {
 @keyframes blink { 50% { opacity: 0; } }
 
 .marq {
+  --marq-scroll-speed: 15s;
+  --marq-bounce-speed: 4.2s;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  white-space: nowrap;
+  container-type: inline-size;
   font-weight: bold;
   color: #000;
   background: linear-gradient(90deg, #ffff00, #00ffff, #ff00ff, #00ff66);
@@ -88,9 +95,45 @@ body {
   padding: 6px 10px;
 }
 
-.marq.top { margin: 12px; }
-.marq.inner { margin: 8px 0; }
-.marq.bottom { margin: 10px 0 8px; }
+.marq.top { margin: 12px; --marq-bounce-speed: 4s; }
+.marq.inner { margin: 8px 0; --marq-scroll-speed: 16s; }
+.marq.bottom { margin: 10px 0 8px; --marq-bounce-speed: 4.8s; }
+
+.marqText {
+  display: inline-block;
+  min-width: max-content;
+  animation: marqScroll var(--marq-scroll-speed) linear infinite;
+  will-change: transform;
+}
+
+.marq.top .marqText,
+.marq.bottom .marqText {
+  animation-name: marqBounce;
+  animation-duration: var(--marq-bounce-speed);
+  animation-direction: alternate;
+}
+
+@keyframes marqScroll {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes marqBounce {
+  from { transform: translateX(0); }
+  to { transform: translateX(60vw); }
+}
+
+@supports (width: 100cqw) {
+  @keyframes marqScroll {
+    from { transform: translateX(100cqw); }
+    to { transform: translateX(-100%); }
+  }
+
+  @keyframes marqBounce {
+    from { transform: translateX(0); }
+    to { transform: translateX(max(40px, calc(100cqw - 100%))); }
+  }
+}
 
 .nav {
   background: rgba(0, 255, 255, 0.07);
@@ -529,11 +572,21 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  /* Keep the intentional shrine marquees moving while quieting CSS effects. */
+  *:not(marquee):not(marquee *),
+  *:not(marquee)::before,
+  *:not(marquee)::after {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+
+  .marq .marqText {
+    animation: marqScroll var(--marq-scroll-speed) linear infinite !important;
+  }
+
+  .marq.top .marqText,
+  .marq.bottom .marqText {
+    animation: marqBounce var(--marq-bounce-speed) linear infinite alternate !important;
   }
 }
