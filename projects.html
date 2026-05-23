@@ -1,6 +1,6 @@
 ---
 title: Open Source Projects by GNARGNARHEAD
-description: Auto-updated list of GNARGNARHEAD public GitHub repositories, experiments, and software projects.
+description: Auto-updated list of GNARGNARHEAD public, non-empty GitHub repositories, experiments, and software projects.
 ---
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
@@ -66,7 +66,7 @@ description: Auto-updated list of GNARGNARHEAD public GitHub repositories, exper
           <div class="panel">
             <div class="panelTitle">HOW THIS WERKS</div>
             <div class="small">
-              This page auto-lists my public GitHub repos (no JS, no manual edits) using GitHub Pages build metadata.
+              This page auto-lists my public, non-empty GitHub repos (no JS, no manual edits) using GitHub Pages build metadata.
               <hr class="hr">
               <b>Last build:</b> <span class="counter">{{ site.time | date: "%Y-%m-%d" }}</span>
               <span class="sep">|</span>
@@ -77,7 +77,7 @@ description: Auto-updated list of GNARGNARHEAD public GitHub repositories, exper
           <div class="panel">
             <div class="panelTitle">PUBLIK PROJEKTS</div>
             <div class="grid">
-              {% assign repos = site.github.public_repositories | where: "fork", false | sort: "pushed_at" | reverse %}
+              {% assign repos = site.github.public_repositories | where: "fork", false | where_exp: "repo", "repo.size > 0" | sort: "pushed_at" | reverse %}
               {% for repo in repos %}
                 <div class="card">
                   <div class="cardTitle">{{ repo.name }}</div>
