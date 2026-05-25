@@ -4,7 +4,7 @@
 <div class="panel">
   <div class="panelTitle">NAVIGASHUN</div>
   <a class="btn{% if current == 'home' %} current{% endif %}" href="{{ home_href }}">HOME</a>
-  <a class="btn" href="{{ home_href }}#about">ABOUT ME</a>
+  <a class="btn{% if current == 'paintings' %} current{% endif %}" href="{{ nav_base }}paintings.html">PAINTINGS</a>
   <a class="btn{% if current == 'projects' %} current{% endif %}" href="{{ nav_base }}projects.html">PROJECTS</a>
   <a class="btn{% if current == 'whacker' %} current{% endif %}" href="{{ nav_base }}whacker.html">WHACKER</a>
   <a class="btn{% if current == 'photography' %} current{% endif %}" href="{{ nav_base }}photography.html">PHOTOGRAPHY</a>
@@ -24,6 +24,9 @@
       {% when "projects" %}
         <div><b>FULL REPO LIST:</b></div>
         <div><a href="https://github.com/gnargnarhead?tab=repositories" target="_blank" rel="noreferrer">github.com/gnargnarhead</a></div>
+      {% when "paintings" %}
+        <div><b>ART COUNT:</b> <span class="counter">003</span></div>
+        <div><b>VIEWS:</b> <span class="counter">005</span></div>
       {% when "albums" %}
         <div><b>FORMAT:</b> <span class="counter">COVERS ONLY</span></div>
         <div><b>LINK OUT:</b> <span class="counter">DISCOGS</span></div>

@@ -226,6 +226,7 @@ description: Liminal space street photography from quiet nighttime Japan streets
               {% for post in recent_posts limit:3 %}
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
               {% endfor %}
+              <a href="{{ '/paintings.html' | relative_url }}">Original paintings archive</a><br>
               <a href="{{ '/blogs/index.html' | relative_url }}">Browse all blog posts</a>
             </p>
           </div>
@@ -234,6 +235,7 @@ description: Liminal space street photography from quiet nighttime Japan streets
             <p>
               <a href="{{ '/projects.html' | relative_url }}">Software projects and experiments</a><br>
               <a href="{{ '/whacker.html' | relative_url }}">Whacker: gameplay page for the public Pong build</a><br>
+              <a href="{{ '/paintings.html' | relative_url }}">Original paintings archive</a><br>
               <a href="{{ '/albums.html' | relative_url }}">Favorite albums vault with Discogs links</a><br>
               <a href="{{ '/stuff.html' | relative_url }}">Links &amp; Stuff (gear, setup notes, and wallpaper downloads)</a><br>
               <a href="{{ '/pet.html' | relative_url }}">Virtual pet terminal (he is sleeping)</a><br>
