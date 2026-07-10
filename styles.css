@@ -295,6 +295,7 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 
 @media (min-width: 721px) {
   .albumCardStaggerUp { margin-top: -35%; }
+  .albumCardStaggerUpShallow { margin-top: -10%; }
 }
 
 .albumLink {
