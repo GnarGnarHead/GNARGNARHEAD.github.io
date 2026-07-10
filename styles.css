@@ -293,6 +293,10 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   background: rgba(0, 0, 0, 0.40);
 }
 
+@media (min-width: 721px) {
+  .albumCardStaggerUp { margin-top: -35%; }
+}
+
 .albumLink {
   display: block;
   line-height: 0;
