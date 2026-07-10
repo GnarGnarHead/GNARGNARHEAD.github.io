@@ -281,10 +281,17 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 
 .albumGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   align-items: start;
   margin-top: 12px;
+}
+
+.albumColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
 }
 
 .albumCard {
@@ -293,9 +300,15 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   background: rgba(0, 0, 0, 0.40);
 }
 
-@media (min-width: 721px) {
-  .albumCardStaggerUp { margin-top: -35%; }
-  .albumCardStaggerUpShallow { margin-top: -10%; }
+@media (max-width: 540px) {
+  .albumGrid,
+  .albumColumn {
+    gap: 8px;
+  }
+
+  .albumCard {
+    padding: 6px;
+  }
 }
 
 .albumLink {
