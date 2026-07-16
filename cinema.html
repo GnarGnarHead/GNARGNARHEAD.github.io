@@ -45,16 +45,16 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
   <body class="cinemaPage">
     <table class="layout cinemaLayout" cellspacing="0" cellpadding="10" border="6" align="center">
       <tr>
-        <td colspan="2" class="header cinemaHeader">
+        <td class="header cinemaHeader">
+          <a class="cinemaReturn" href="index.html" aria-label="Return to home" title="Return home">
+            <span class="cinemaReturnIcon" aria-hidden="true">&larr;</span>
+            <span class="cinemaReturnLabel">RETURN</span>
+          </a>
           <h1 class="title">CINEMA</h1>
         </td>
       </tr>
 
       <tr>
-        <td class="nav" valign="top" width="220">
-          {% include shrine_nav.html current="cinema" base="" %}
-        </td>
-
         <td class="content cinemaContent" valign="top">
           <div class="cinemaStage" aria-label="Cinema screen">
             <img class="cinemaFrame" src="photos/Cinema/cinema-curtains.jpg" alt="" width="1440" height="810" fetchpriority="high" decoding="async" aria-hidden="true">
@@ -72,7 +72,7 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
       </tr>
 
       <tr>
-        <td colspan="2" class="footer cinemaFooter">
+        <td class="footer cinemaFooter">
           <div class="tiny">&copy; 1999 GNARGNARHEAD</div>
         </td>
       </tr>
