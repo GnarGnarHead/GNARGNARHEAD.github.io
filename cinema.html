@@ -60,12 +60,16 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
             <img class="cinemaFrame" src="photos/Cinema/cinema-curtains.jpg" alt="" width="1440" height="810" fetchpriority="high" decoding="async" aria-hidden="true">
             <div class="cinemaScreen">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/yRLnEJWYXfc?autoplay=1&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;origin={{ site_url | url_encode }}&amp;widget_referrer={{ canonical_url | url_encode }}"
-                title="Cinema"
+                id="cinemaPlayer"
+                src="https://www.youtube-nocookie.com/embed/yRLnEJWYXfc?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;origin={{ site_url | url_encode }}&amp;widget_referrer={{ canonical_url | url_encode }}"
+                title="Cinema screen"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
               </iframe>
+              <button class="cinemaStart" id="cinemaStart" type="button" aria-label="Start the pre-show and feature" title="Start the show" aria-busy="true" disabled>
+                <span class="cinemaStartIcon" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </td>
@@ -77,5 +81,7 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
         </td>
       </tr>
     </table>
+    <script src="cinema.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>

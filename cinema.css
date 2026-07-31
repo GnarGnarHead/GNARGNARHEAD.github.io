@@ -129,6 +129,51 @@
   border: 0;
 }
 
+.cinemaStart {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: #f1d27a;
+  background: #000;
+  border: 0;
+  cursor: pointer;
+}
+
+.cinemaStart[hidden] {
+  display: none;
+}
+
+.cinemaStart:disabled {
+  cursor: wait;
+}
+
+.cinemaStartIcon {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 21px solid currentColor;
+  filter: drop-shadow(0 0 8px rgba(241, 210, 122, 0.55));
+}
+
+.cinemaStart:hover:not(:disabled) {
+  color: #fff0bd;
+  background: #080203;
+}
+
+.cinemaStart:focus-visible {
+  outline: 2px solid #f1d27a;
+  outline-offset: -4px;
+}
+
 .cinemaScreen:focus-within {
   outline: 2px solid #f1d27a;
   outline-offset: 2px;
