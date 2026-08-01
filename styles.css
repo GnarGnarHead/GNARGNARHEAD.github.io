@@ -748,13 +748,12 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
     scroll-behavior: auto !important;
   }
 
-  .marq {
-    white-space: normal;
+  .marq .marqText {
+    animation: marqScroll var(--marq-scroll-speed) linear infinite !important;
   }
 
-  .marqText {
-    display: block;
-    min-width: 0;
-    transform: none !important;
+  .marq.top .marqText,
+  .marq.bottom .marqText {
+    animation: marqBounce var(--marq-bounce-speed) linear infinite alternate !important;
   }
 }
