@@ -696,6 +696,38 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   .layout:not(.cinemaLayout) { width: auto; }
   .title { font-size: 34px; }
   .nav { border-right: none; border-bottom: 4px ridge #ff00ff; }
+
+  .nav > .panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav > .panel > .panelTitle,
+  .nav > .panel > .hr,
+  .nav > .panel > .mini {
+    grid-column: 1 / -1;
+  }
+
+  .nav > .panel > .panelTitle {
+    margin-bottom: 0;
+  }
+
+  .nav > .panel > .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 42px;
+    margin: 0;
+    padding: 7px 5px;
+  }
+
+  .nav > .panel > .hr {
+    width: 100%;
+    margin: 2px 0 0;
+  }
+
   .twoCol, .grid, .paintingFeature { grid-template-columns: 1fr; }
   .sticker { width: 86px; }
   .stickerHomeGas,
