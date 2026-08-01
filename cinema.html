@@ -2,7 +2,7 @@
 title: Cinema - GNARGNARHEAD
 description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and playing the feature presentation.
 ---
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     {% assign site_url = site.url | default: "https://gnargnarhead.github.io" %}
@@ -56,7 +56,7 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
 
       <tr>
         <td class="content cinemaContent" valign="top">
-          <div class="cinemaStage" aria-label="Cinema screen">
+          <div class="cinemaStage">
             <img class="cinemaFrame" src="photos/Cinema/cinema-curtains.jpg" alt="" width="1440" height="810" fetchpriority="high" decoding="async" aria-hidden="true">
             <div class="cinemaScreen">
               <iframe
@@ -70,6 +70,11 @@ description: Cinema at the GNARGNARHEAD cyber shrine, framed in red velvet and p
               <button class="cinemaStart" id="cinemaStart" type="button" aria-label="Start the pre-show and feature" title="Start the show" aria-busy="true" disabled>
                 <span class="cinemaStartIcon" aria-hidden="true"></span>
               </button>
+              <noscript>
+                <a class="cinemaFallback" href="https://www.youtube.com/watch?v=yRLnEJWYXfc" target="_blank" rel="noreferrer" aria-label="Open the feature on YouTube" title="Open the feature on YouTube">
+                  <span class="cinemaStartIcon" aria-hidden="true"></span>
+                </a>
+              </noscript>
             </div>
           </div>
         </td>

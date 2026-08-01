@@ -153,6 +153,28 @@
   cursor: wait;
 }
 
+.cinemaFallback {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1d27a;
+  background: #000;
+  text-decoration: none;
+}
+
+.cinemaFallback:hover {
+  color: #fff0bd;
+  background: #080203;
+}
+
+.cinemaFallback:focus-visible {
+  outline: 2px solid #f1d27a;
+  outline-offset: -4px;
+}
+
 .cinemaStartIcon {
   display: block;
   width: 0;

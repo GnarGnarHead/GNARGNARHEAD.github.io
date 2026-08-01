@@ -1,5 +1,11 @@
 /* Loud on purpose. */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -679,16 +685,16 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 }
 
 @media (max-width: 720px) {
-  .layout,
-  .layout tbody,
-  .layout tr,
-  .layout td {
+  .layout:not(.cinemaLayout),
+  .layout:not(.cinemaLayout) tbody,
+  .layout:not(.cinemaLayout) tr,
+  .layout:not(.cinemaLayout) td {
     display: block;
     width: auto !important;
   }
 
-  .layout { width: auto; }
-  .title { font-size: 42px; }
+  .layout:not(.cinemaLayout) { width: auto; }
+  .title { font-size: 34px; }
   .nav { border-right: none; border-bottom: 4px ridge #ff00ff; }
   .twoCol, .grid, .paintingFeature { grid-template-columns: 1fr; }
   .sticker { width: 86px; }
@@ -702,21 +708,21 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Keep the intentional shrine marquees moving while quieting CSS effects. */
-  *:not(marquee):not(marquee *),
-  *:not(marquee)::before,
-  *:not(marquee)::after {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
   }
 
-  .marq .marqText {
-    animation: marqScroll var(--marq-scroll-speed) linear infinite !important;
+  .marq {
+    white-space: normal;
   }
 
-  .marq.top .marqText,
-  .marq.bottom .marqText {
-    animation: marqBounce var(--marq-bounce-speed) linear infinite alternate !important;
+  .marqText {
+    display: block;
+    min-width: 0;
+    transform: none !important;
   }
 }

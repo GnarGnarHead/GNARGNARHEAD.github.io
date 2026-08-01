@@ -1,5 +1,11 @@
 /* Film-ish photography contact sheet (fictional). */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --paper: #f6f2ea;
   --ink: #0e0e10;

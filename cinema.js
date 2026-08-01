@@ -21,6 +21,7 @@
   var startButton = document.getElementById("cinemaStart");
   var player;
   var playerReady = false;
+  var playerReadyTimer;
   var phase = "idle";
   var trailerQueue = [];
 
@@ -66,9 +67,23 @@
   }
 
   function handlePlayerReady() {
+    window.clearTimeout(playerReadyTimer);
     playerReady = true;
-    startButton.disabled = false;
+    if (phase === "player-error") {
+      phase = "idle";
+    }
     startButton.removeAttribute("aria-busy");
+    showStartButton("Start the pre-show and feature", "Start the show");
+  }
+
+  function handlePlayerUnavailable() {
+    if (playerReady || phase !== "idle") {
+      return;
+    }
+
+    phase = "player-error";
+    startButton.removeAttribute("aria-busy");
+    showStartButton("Open the feature on YouTube", "Open the feature on YouTube");
   }
 
   function handlePlayerStateChange(event) {
@@ -94,12 +109,12 @@
   }
 
   startButton.addEventListener("click", function () {
-    if (!playerReady) {
+    if (phase === "feature-error" || phase === "player-error") {
+      window.open(featureUrl, "_blank", "noopener,noreferrer");
       return;
     }
 
-    if (phase === "feature-error") {
-      window.open(featureUrl, "_blank", "noopener,noreferrer");
+    if (!playerReady) {
       return;
     }
 
@@ -115,13 +130,19 @@
   });
 
   window.onYouTubeIframeAPIReady = function () {
-    player = new YT.Player("cinemaPlayer", {
-      events: {
-        onReady: handlePlayerReady,
-        onStateChange: handlePlayerStateChange,
-        onError: handlePlayerError,
-        onAutoplayBlocked: handleAutoplayBlocked
-      }
-    });
+    try {
+      player = new YT.Player("cinemaPlayer", {
+        events: {
+          onReady: handlePlayerReady,
+          onStateChange: handlePlayerStateChange,
+          onError: handlePlayerError,
+          onAutoplayBlocked: handleAutoplayBlocked
+        }
+      });
+    } catch (error) {
+      handlePlayerUnavailable();
+    }
   };
+
+  playerReadyTimer = window.setTimeout(handlePlayerUnavailable, 8000);
 })();

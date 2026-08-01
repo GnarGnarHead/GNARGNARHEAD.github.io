@@ -3,3 +3,7 @@ description: Personal website with projects, photography, and blog posts by GNAR
 url: "https://gnargnarhead.github.io"
 baseurl: ""
 lang: en-US
+exclude:
+  - AGENTS.md
+  - README.md
+  - merch-type-generation-brief.md

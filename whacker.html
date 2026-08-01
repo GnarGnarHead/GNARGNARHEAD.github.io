@@ -71,11 +71,11 @@
             wrapped around the same match system.
           </p>
 
-          <div class="chipRow" aria-label="Whacker platforms and systems">
-            <span class="chip">Linux Native</span>
-            <span class="chip">Desktop</span>
-            <span class="chip">R36 Handheld</span>
-            <span class="chip">Dynamic AI</span>
+          <div class="chipRow" role="list" aria-label="Whacker platforms and systems">
+            <span class="chip" role="listitem">Linux Native</span>
+            <span class="chip" role="listitem">Desktop</span>
+            <span class="chip" role="listitem">R36 Handheld</span>
+            <span class="chip" role="listitem">Dynamic AI</span>
           </div>
 
           <div class="heroBody">
@@ -136,7 +136,7 @@
           <p class="archiveTag">Current Shot</p>
           <h3>Quick match setup</h3>
           <a href="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_151941.png" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_151941.png" alt="Whacker quick match setup screen showing per-side control, tuning access, and style labels." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_151941.png" alt="Whacker quick match setup screen showing per-side control, tuning access, and style labels." width="1056" height="594" loading="lazy" decoding="async">
           </a>
           <p>
             This is where the game stops reading like a generic difficulty menu
@@ -194,7 +194,7 @@
             <p class="archiveTag">Current Shot</p>
             <h3>Skill triangle + tuning</h3>
             <a href="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155344.png" target="_blank" rel="noreferrer">
-              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155344.png" alt="Whacker paddle tuning screen showing the skill triangle and build distribution." loading="lazy" decoding="async">
+              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155344.png" alt="Whacker paddle tuning screen showing the skill triangle and build distribution." width="1056" height="594" loading="lazy" decoding="async">
             </a>
             <p>
               This is the heart of the progression layer: a visible build that
@@ -234,11 +234,11 @@
 
             <div class="stylePanel">
               <p class="cardLabel">Readable Styles</p>
-              <div class="styleStrip" aria-label="Paddle styles">
-                <span class="stylePill">Balanced</span>
-                <span class="stylePill">Power</span>
-                <span class="stylePill">Spin</span>
-                <span class="stylePill">Technical</span>
+              <div class="styleStrip" role="list" aria-label="Paddle styles">
+                <span class="stylePill" role="listitem">Balanced</span>
+                <span class="stylePill" role="listitem">Power</span>
+                <span class="stylePill" role="listitem">Spin</span>
+                <span class="stylePill" role="listitem">Technical</span>
               </div>
               <p>
                 Paddle tuning normalizes those three weights, classifies the
@@ -273,7 +273,7 @@
             <p class="archiveTag">Current Shot</p>
             <h3>Onboarding scene</h3>
             <a href="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_152029.png" target="_blank" rel="noreferrer">
-              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_152029.png" alt="Current Whacker story scene screen." loading="lazy" decoding="async">
+              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_152029.png" alt="Current Whacker story scene screen." width="1056" height="594" loading="lazy" decoding="async">
             </a>
             <p>
               The current story slice already has dialogue UI, side choice,
@@ -286,7 +286,7 @@
             <p class="archiveTag">Current Shot</p>
             <h3>Story hub</h3>
             <a href="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155335.png" target="_blank" rel="noreferrer">
-              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155335.png" alt="Current Whacker story hub screen showing progression and tuning." loading="lazy" decoding="async">
+              <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/screenshots%20final/Screenshot_20260423_155335.png" alt="Current Whacker story hub screen showing progression and tuning." width="1056" height="594" loading="lazy" decoding="async">
             </a>
             <p>
               The hub carries the persistent state: week, record, rating,
@@ -296,30 +296,30 @@
           </article>
         </div>
 
-        <div class="loopRail" aria-label="Progression loop">
-          <article class="loopStep">
+        <div class="loopRail" role="list" aria-label="Progression loop">
+          <div class="loopStep" role="listitem">
             <p class="cardLabel">1</p>
             <h3>Onboard</h3>
             <p>The first slice introduces the club and lands the player in the hub.</p>
-          </article>
+          </div>
 
-          <article class="loopStep">
+          <div class="loopStep" role="listitem">
             <p class="cardLabel">2</p>
             <h3>Train + play</h3>
             <p>Training matches and official matches both count toward the same career.</p>
-          </article>
+          </div>
 
-          <article class="loopStep">
+          <div class="loopStep" role="listitem">
             <p class="cardLabel">3</p>
             <h3>Grow the paddle</h3>
             <p>How you play pushes the build toward technique, power, or spin instead of resetting after each match.</p>
-          </article>
+          </div>
 
-          <article class="loopStep">
+          <div class="loopStep" role="listitem">
             <p class="cardLabel">4</p>
             <h3>Return to hub</h3>
             <p>Train more, take the next match, retune the paddle, or stop where the current story slice ends.</p>
-          </article>
+          </div>
         </div>
       </section>
 
@@ -339,7 +339,7 @@
         <div class="portraitGrid portraitGrid--five">
           <article class="portraitCard">
             <h3>Player Character</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/player_character_portrait.png" alt="Player Character portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/player_character_portrait.png" alt="Player Character portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               The point of entry into the club; still mostly scaffolded on
               paper, but clearly the center of the season.
@@ -351,7 +351,7 @@
 
           <article class="portraitCard">
             <h3>Kai</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/kai_alvarez_portrait.png" alt="Kai Alvarez portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/kai_alvarez_portrait.png" alt="Kai Alvarez portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               The first bridge into the club: welcoming, fair-minded, and
               quietly competitive.
@@ -363,7 +363,7 @@
 
           <article class="portraitCard">
             <h3>Aya</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/aya_villanueva_portrait.png" alt="Aya Villanueva portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/aya_villanueva_portrait.png" alt="Aya Villanueva portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               A composed stabilizer who treats care as action and keeps pressure
               from splitting the room.
@@ -375,7 +375,7 @@
 
           <article class="portraitCard">
             <h3>Benji</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/benji_santos_portrait.png" alt="Benji Santos portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/benji_santos_portrait.png" alt="Benji Santos portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               A polite spin nuisance who works the edges of trust, access, and
               plausible deniability.
@@ -387,7 +387,7 @@
 
           <article class="portraitCard">
             <h3>Tix</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/tino_tix_ramos_portrait.png" alt="Tino Tix Ramos portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/tino_tix_ramos_portrait.png" alt="Tino Tix Ramos portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               A technical foil who trusts rules, records, and repeatable methods
               more than vibes.
@@ -402,7 +402,7 @@
         <div class="portraitGrid portraitGrid--three">
           <article class="portraitCard">
             <h3>Coach Reyes</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/coach_reyes_portrait.png" alt="Coach Reyes portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/coach_reyes_portrait.png" alt="Coach Reyes portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               A boundary-driven coach who trusts sequence, standards, and
               fairness backed by accountable process.
@@ -414,7 +414,7 @@
 
           <article class="portraitCard">
             <h3>Jolo</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/jolo_marasigan_portrait.png" alt="Jolo Marasigan portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/jolo_marasigan_portrait.png" alt="Jolo Marasigan portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               A force-first rival who wants effort to be visible and pressure to
               be met head-on.
@@ -426,7 +426,7 @@
 
           <article class="portraitCard">
             <h3>Issa</h3>
-            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/issa_flores_portrait.png" alt="Issa Flores portrait art from Whacker." loading="lazy" decoding="async">
+            <img src="https://raw.githubusercontent.com/GnarGnarHead/Whacker/main/story/characters/art/issa_flores_portrait.png" alt="Issa Flores portrait art from Whacker." width="1024" height="1024" loading="lazy" decoding="async">
             <p class="portraitBlurb">
               The club&apos;s social glue: practical, adaptive, and always tracking
               what the group needs next.
