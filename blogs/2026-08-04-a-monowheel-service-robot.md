@@ -7,6 +7,10 @@ tags:
   - design
   - automation
 description: "A compact monowheel service robot concept for delivery, inspection, and rapid-response telepresence."
+feature_image: "/photos/ChatGPT%20Image%20Aug%204%2C%202026%2C%2001_06_13%20AM-optimized.jpg"
+feature_image_alt: "A monowheel service robot handing a food delivery to someone at a doorway."
+feature_image_width: 1448
+feature_image_height: 1086
 ---
 
 ![A monowheel service robot handing a food delivery to someone at a doorway.](../photos/ChatGPT%20Image%20Aug%204%2C%202026%2C%2001_06_13%20AM-optimized.jpg)

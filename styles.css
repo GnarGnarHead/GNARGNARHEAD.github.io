@@ -285,6 +285,257 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   margin-bottom: 6px;
 }
 
+.homeSignal {
+  min-height: 138px;
+  overflow: hidden;
+  padding-right: 94px;
+  border-color: #00ffff #ff00ff #ffff00 #00ff66;
+}
+
+.homeSignal .stickerHomeChibi {
+  top: 36px;
+  right: -6px;
+  bottom: auto;
+  width: 92px;
+  transform: rotate(-8deg);
+}
+
+.homeSignalLead {
+  max-width: 520px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.homeSignalMeters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  margin-top: 12px;
+  color: #00ffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+}
+
+.homeSignalMeters span {
+  border-left: 3px solid #ff00ff;
+  padding-left: 7px;
+}
+
+.homeSignalMeters b {
+  color: #ffff00;
+  margin-right: 4px;
+}
+
+.homeLatestPanel {
+  border-color: #ff00ff #00ffff #00ff66 #ffff00;
+}
+
+.homeLatest {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.homeLatestNoImage {
+  grid-template-columns: 1fr;
+}
+
+.homeLatestMedia {
+  display: block;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 3px ridge rgba(255, 255, 255, 0.65);
+  background: #050505;
+  line-height: 0;
+}
+
+.homeLatestMedia:hover {
+  background: #050505;
+}
+
+.homeLatestMedia:focus-visible {
+  outline: 3px dotted #ffff00;
+  outline-offset: 3px;
+}
+
+.homeLatestImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homeLatestCopy {
+  min-width: 0;
+  padding: 6px 4px 6px 0;
+}
+
+.homeLatestMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #00ff66;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+}
+
+.homeLatestTitle {
+  margin: 12px 0 8px;
+  font-size: 25px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.homeLatestTitle a {
+  color: #ffffff;
+  text-decoration-color: #ff00ff;
+  text-underline-offset: 4px;
+}
+
+.homeLatestTitle a:visited {
+  color: #ffffff;
+}
+
+.homeLatestTitle a:hover {
+  color: #ffff00;
+}
+
+.homeLatestCopy p {
+  margin: 0 0 14px;
+  color: #b7ffb7;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.homeLatestLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 9px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.homeLatestLinks span {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.homeEmptySignal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.homePortalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.homePortal,
+.homePortal:visited {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  overflow: hidden;
+  color: #b7ffb7;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.48);
+  border: 3px ridge rgba(255, 255, 255, 0.6);
+}
+
+.homePortal:hover {
+  color: #ffffff;
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #ffff00 #00ffff #ff00ff #00ff66;
+}
+
+.homePortal:focus-visible {
+  outline: 3px dotted #ffff00;
+  outline-offset: 3px;
+}
+
+.homePortalMedia {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #050505;
+  border-bottom: 3px ridge rgba(255, 255, 255, 0.45);
+  line-height: 0;
+}
+
+.homePortalImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 160ms ease-out, filter 160ms ease-out;
+}
+
+.homePortal:hover .homePortalImage {
+  transform: scale(1.025);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.homePortalMediaContain .homePortalImage {
+  object-fit: contain;
+  padding: 9px;
+}
+
+.homePortalMediaWide .homePortalImage {
+  object-fit: contain;
+}
+
+.homePortalPainting {
+  object-position: center 28%;
+}
+
+.homePortalCopy {
+  display: block;
+  min-height: 92px;
+  padding: 10px 11px 12px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.homePortalCopy strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff00ff;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+.homePortal:hover .homePortalCopy strong {
+  color: #ffff00;
+}
+
+.homeElsewherePanel {
+  border-color: #00ff66 #ffff00 #ff00ff #00ffff;
+}
+
+.homeElsewhere {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px 11px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.homeElsewhere span {
+  color: #ff00ff;
+}
+
 .albumGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -736,6 +987,43 @@ a:hover { color: #ffff00; background: rgba(255, 255, 255, 0.1); }
   .stickerAlbumsTourist,
   .sticker404Warning {
     right: -8px;
+  }
+
+  .homeSignal {
+    min-height: 142px;
+    padding-right: 82px;
+  }
+
+  .homeSignal .stickerHomeChibi {
+    top: 42px;
+    right: -5px;
+    width: 80px;
+  }
+
+  .homeSignalLead {
+    font-size: 16px;
+  }
+
+  .homeLatest {
+    grid-template-columns: 1fr;
+  }
+
+  .homeLatestCopy {
+    padding: 2px 2px 4px;
+  }
+
+  .homeLatestTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 540px) {
+  .homePortalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .homePortalCopy {
+    min-height: 0;
   }
 }
 
