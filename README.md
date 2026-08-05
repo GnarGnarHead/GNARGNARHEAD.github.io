@@ -47,7 +47,7 @@ GitHub Pages is GitHub’s free static hosting for websites built from a reposit
 - Create an optimized copy and keep the original until you confirm the result:
   - `magick photos/Albums/ORIGINAL.jpg -strip -interlace Plane -quality 84 photos/Albums/ORIGINAL-optimized.jpg`
 - Use the optimized file in `albums.html`, not the original.
-- Update the manual count text (`Starting stack: N albums and counting.`).
+- Update the manual count text (`Starting stack: N selections and counting.`).
 - Append one existing `<div class="albumCard">...</div>` pattern to the left `.albumColumn` for an odd overall position or the right `.albumColumn` for an even one. Embedded videos count as cards.
 - For the new card:
   - set the Discogs URL on the `<a>`

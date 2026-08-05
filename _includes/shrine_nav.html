@@ -20,7 +20,7 @@
     {% case current %}
       {% when "home" %}
         <div><b>VISIT0R COUNT:</b> <span class="counter">0001337</span></div>
-        <div><b>LAST UPD8D:</b> <span class="counter">2026-08-04</span></div>
+        <div><b>LAST UPD8D:</b> <span class="counter">{{ site.time | date: "%Y-%m-%d" }}</span></div>
         <div><b>SITE MODE:</b> <span class="counter">LOUD</span></div>
       {% when "projects" %}
         <div><b>FULL REPO LIST:</b></div>
