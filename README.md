@@ -15,7 +15,7 @@ GitHub Pages is GitHub’s free static hosting for websites built from a reposit
 - This repo is the source for the site at `https://gnargnarhead.github.io/`.
 - Most pages are plain HTML files in the repo root (`index.html`, `projects.html`, etc.).
 - The blog uses Markdown files in `blogs/` with YAML front matter and layouts in `_layouts/` (GitHub Pages builds these with Jekyll).
-- `projects.html` auto-lists public repos at build time using Jekyll’s GitHub metadata (`site.github.public_repositories`) — no JS, no manual list.
+- `projects.html` auto-lists public repos using Jekyll’s GitHub metadata (`site.github.public_repositories`), generating the list at build time instead of maintaining it manually.
 - The shared shrine sidebar navigation lives in `_includes/shrine_nav.html`; pass a `current` value from each table-layout page.
 - `404.html` is the custom missing-page corridor.
 - Images live in `photos/`.

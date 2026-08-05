@@ -1,7 +1,7 @@
 ---
 layout: blog_index
 title: Blog / Rants - GNARGNARHEAD's Cyber Shrine
-description: Notes, rants, and build logs on software, no-JS web projects, and experiments.
+description: Notes, rants, and build logs on software, machines, art, and assorted experiments.
 ---
 {% assign posts = site.pages | where: "dir", "/blogs/" | where: "layout", "blog_post" | sort: "date" | reverse %}
 {% assign long_posts = posts | where_exp: "item", "item.micro != true" %}
