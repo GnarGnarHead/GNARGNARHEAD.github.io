@@ -11,8 +11,6 @@ description: "A love letter to Garth Marenghi’s Darkplace."
 
 I, love you, Garth Marenghi.
 
-And, Dr Rick Dagless, M.D.
-
 And, Thornton Reed.
 
 And, Dr Lucien Sanchez.
