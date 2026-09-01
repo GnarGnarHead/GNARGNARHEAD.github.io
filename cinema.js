@@ -17,6 +17,7 @@
   ];
   var preShowTrailerCount = 2;
   var featureId = "yRLnEJWYXfc";
+  var bonusId = "I6xR0HO6_G8";
   var featureUrl = "https://www.youtube.com/watch?v=" + featureId;
   var startButton = document.getElementById("cinemaStart");
   var player;
@@ -55,6 +56,17 @@
     player.loadVideoById(featureId);
   }
 
+  function finishShow() {
+    phase = "complete";
+    showStartButton("Start the pre-show and feature", "Start the show");
+  }
+
+  function loadBonus() {
+    phase = "bonus";
+    hideStartButton();
+    player.loadVideoById(bonusId);
+  }
+
   function loadNextTrailer() {
     if (trailerQueue.length === 0) {
       loadFeature();
@@ -87,14 +99,33 @@
   }
 
   function handlePlayerStateChange(event) {
-    if (phase === "trailer" && event.data === YT.PlayerState.ENDED) {
+    if (event.data !== YT.PlayerState.ENDED) {
+      return;
+    }
+
+    if (phase === "trailer") {
       loadNextTrailer();
+      return;
+    }
+
+    if (phase === "feature") {
+      loadBonus();
+      return;
+    }
+
+    if (phase === "bonus") {
+      finishShow();
     }
   }
 
   function handlePlayerError() {
     if (phase === "trailer") {
       loadNextTrailer();
+      return;
+    }
+
+    if (phase === "bonus") {
+      finishShow();
       return;
     }
 
@@ -120,7 +151,7 @@
 
     hideStartButton();
 
-    if (phase === "idle") {
+    if (phase === "idle" || phase === "complete") {
       trailerQueue = chooseTrailers(preShowTrailerCount);
       loadNextTrailer();
       return;
